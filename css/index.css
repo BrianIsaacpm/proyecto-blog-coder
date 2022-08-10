@@ -17,7 +17,7 @@ html {
 
 body {
   background-color: #c4bea8;
-  background-color: #E3E3D8;
+  
 }
 
 img {
@@ -125,7 +125,7 @@ div.logo img {
  h1 {
   font-size: 5vh;
   font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-  text-shadow: 0 0 4px rgb(196, 157, 32), 0 0 5px rgb(255, 230, 0), 0 0 3px rgb(255, 217, 0), 0 0 7px rgb(255, 102, 0); 
+  text-shadow: 0 0 4px rgb(128, 50, 76), 0 0 5px rgb(151, 28, 65),
 }
 
 .hero__image img {
@@ -339,7 +339,7 @@ article.flex__item-service h3 {
 }
 
 .background-top-row{
-  background-color: rgba(196, 111, 14, 0.85);
+  background-color: rgba(134, 36, 85, 0.85);
   backdrop-filter: blur(.4rem);
 }
 
@@ -450,7 +450,7 @@ h4 {
 }
 
 .button:hover {
-  background-color: rgba(196, 111, 14, 0.85);
+  background-color: rgba(134, 36, 85, 0.85);
   border: 0.2rem solid rgba(255, 255, 255, 0.699);
   transition: 0.5s;
 }
@@ -508,7 +508,7 @@ h4 {
 }
 
 .logo span {
-  color: #B70E21;
+  color: #94094e;
 }
 
 .contact-wrapper {
@@ -554,14 +554,14 @@ h4 {
   background: none;
   outline: 0;
   color: #fff;
-  border-bottom: 1px solid #f18900;
+  border-bottom: 1px solid #f100e5;
 }
 .contact-form form textarea {
   height: 25rem;
 }
 
 .contact-form form button {
-  background: #f18900;
+  background: #910b49;
   border: 0;
   text-transform: uppercase;
   padding: 1em;
@@ -569,7 +569,7 @@ h4 {
 
 .contact-form form button:hover,
 .contact-form form button:focus {
-  background: #c9b504;
+  background: #430249;
   color: #fff;
   transition: background-color 1s ease-out;
   outline: 0;
@@ -647,7 +647,7 @@ h4 {
     position: absolute;
     width: 35rem;
     height: 20rem;
-    background: linear-gradient(to right, #665620, #d89236);
+    background: linear-gradient(to right, #531b53, #951499);
     transform: rotate(-35deg);
     top: -50px;
     left: -100px;
