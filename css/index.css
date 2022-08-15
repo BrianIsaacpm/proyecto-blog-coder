@@ -47,6 +47,24 @@ footer {
   background-color: rgba(0, 0, 0, 0.67);
   color: #eee;
 }
+
+
+header.header__galeria {
+font-size: 1.6rem;
+}
+
+div.container-fluid {
+  padding: 2rem;
+}
+
+.nav-link {
+  text-align: center;
+}
+
+.dropdown-item {
+  font-size: 1.6rem;
+}
+
 .header__home {
   max-width: inherit;
   display: flex;
@@ -99,9 +117,9 @@ footer {
 }
 
 
-
-div.logo img {
-  height: 9rem;
+.logo {
+  width: 17rem;
+  height: 19rem;
 }
 
 .hero__image {
