@@ -17,7 +17,7 @@ html {
 
 body {
   background-color: #c4bea8;
-  
+  background-color: #d1cdbf;
 }
 
 img {
@@ -36,6 +36,7 @@ footer {
   background-color: #222;
   color: #eee;
 }
+
 
 .titulares {
   max-width: 100vw;
@@ -123,10 +124,10 @@ div.logo img {
 }
 
  h1 {
-  font-size: 5vh;
-  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-  text-shadow: 0 0 4px rgb(128, 50, 76), 0 0 5px rgb(151, 28, 65),
-}
+    font-size: 5vh;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-shadow: 0 0 4px rgb(196, 157, 32), 0 0 5px rgb(255, 230, 0), 0 0 3px rgb(255, 217, 0), 0 0 7px rgb(255, 102, 0); 
+  }
 
 .hero__image img {
   width: 20rem;
@@ -1034,7 +1035,7 @@ h4 {
 
 }
 
-@media only screen and (max-width: 685px) {
+@media only screen and (max-width: 751px) {
 
   /* ////////////   INDEX   ///////////////*/
  
@@ -1092,7 +1093,7 @@ h4 {
 
 }
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 558px) {
 
   div.logo img {
     display: none;
