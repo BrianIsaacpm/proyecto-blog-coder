@@ -6,36 +6,103 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../css/index.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+    crossorigin="anonymous"
+  />
     <title>Nosotros - Salon Mariela</title>
   </head>
   <body class="about">
-    <header class="titulares header__home">
-      <div class="logo">
-        <img src="../img/logo2.png" alt="logo" />
+    <header class="titulares">
+      <div class="row">
+        <div class="container">
+          <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container-fluid">
+              <a class="navbar-brand col-lg-8" href="#"
+                ><img src="../img/logo2.png" alt="logo"
+              /></a>
+
+              <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+              >
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav m-lg-3">
+                  <li class="nav-item">
+                    <a class="nav-link" href="../index.html">
+                      <i class="fa-solid fa-house-chimney"></i
+                      ><span class="off m-lg-2">Home</span></a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="nosotros.html">
+                      <i class="fa-solid fa-users"></i
+                      ><span class="off m-lg-2">Nosotros</span></a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="servicios.html">
+                      <i class="fa-solid fa-bag-shopping"></i
+                      ><span class="off m-lg-2">Servicios</span></a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="galeria.html">
+                      <i class="fa-solid fa-image"></i
+                      ><span class="off m-lg-2">Galeria</span></a
+                    >
+                  </li>
+
+                  <li class="nav-item dropdown">
+                    <a
+                      class="nav-link dropdown-toggle"
+                      href="#"
+                      role="button"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                    >
+                      <i class="fa-solid fa-address-card"></i
+                      ><span class="off m-lg-2">Contacto</span>
+                    </a>
+                    <ul class="dropdown-menu">
+                      <li>
+                        <a class="dropdown-item" href="red-social.html">
+                          <i class="fa-solid fa-share-nodes"></i
+                          ><span class="off m-lg-2">Redes Social</span></a
+                        >
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="contacto.html">
+                          <i class="fa-solid fa-envelope"></i
+                          ><span class="off m-lg-2">Formulario</span></a
+                        >
+                      </li>
+                      <li>
+                        <hr class="dropdown-divider" />
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="../index.html">
+                          <i class="fa-solid fa-house-chimney"></i
+                          ><span class="off m-lg-2">Volver a Home</span></a
+                        >
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+        </div>
       </div>
-      <nav class="menu">
-        <ul>
-          <li>
-            <a href="../index.html"> <i class="fa-solid fa-house-chimney"></i><span class="off">Home</span></a>
-          </li>
-          <li>
-            <a href="nosotros.html"> <i class="fa-solid fa-users"></i><span class="off">Nosotros</span></a>
-          </li>
-          <li>
-            <a href="servicios.html"> <i class="fa-solid fa-bag-shopping"></i><span class="off">Servicios</span></a>
-          </li>
-          <li>
-            <a href="galeria.html"> <i class="fa-solid fa-image"></i><span class="off">Galeria</span></a>
-          </li>
-          <li>
-          <li>
-            <a href="red-social.html"> <i class="fa-solid fa-share-nodes"></i><span class="off">Red Social</span></a>
-          </li>
-          <li>
-            <a href="contacto.html"> <i class="fa-solid fa-envelope"></i><span class="off">Contacto</span></a>
-          </li>
-        </ul>
-      </nav>
     </header>
     <main>
       <article class="hero__image-about">
@@ -115,5 +182,12 @@
       </section>
     </main>
     <footer><b> Todos los derechos reservados &copy;</b></footer>
+
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>
