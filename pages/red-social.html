@@ -15,94 +15,90 @@
     <title>Red Social - Salon Mariela</title>
   </head>
   <body class="red-social">
-    <header class="titulares">
-      <div class="row">
-        <div class="container">
-          <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-            <div class="container-fluid">
-              <a class="navbar-brand col-lg-8" href="#"
-                ><img src="../img/logo2.png" alt="logo"
-              /></a>
+    <header>
+      
+      <!-- Inicio del menu -->
+    
+      <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+        <div class="container-fluid">
 
-              <button
-                class="navbar-toggler"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent"
-                aria-controls="navbarSupportedContent"
-                aria-expanded="false"
-                aria-label="Toggle navigation"
-              >
-                <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav m-lg-3">
-                  <li class="nav-item">
-                    <a class="nav-link" href="../index.html">
-                      <i class="fa-solid fa-house-chimney"></i
-                      ><span class="off m-lg-2">Home</span></a
-                    >
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="nosotros.html">
-                      <i class="fa-solid fa-users"></i
-                      ><span class="off m-lg-2">Nosotros</span></a
-                    >
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="servicios.html">
-                      <i class="fa-solid fa-bag-shopping"></i
-                      ><span class="off m-lg-2">Servicios</span></a
-                    >
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="galeria.html">
-                      <i class="fa-solid fa-image"></i
-                      ><span class="off m-lg-2">Galeria</span></a
-                    >
-                  </li>
+        <!-- Logo -->
 
-                  <li class="nav-item dropdown">
-                    <a
-                      class="nav-link dropdown-toggle"
-                      href="#"
-                      role="button"
-                      data-bs-toggle="dropdown"
-                      aria-expanded="false"
-                    >
-                      <i class="fa-solid fa-address-card"></i
-                      ><span class="off m-lg-2">Contacto</span>
-                    </a>
-                    <ul class="dropdown-menu">
-                      <li>
-                        <a class="dropdown-item" href="red-social.html">
-                          <i class="fa-solid fa-share-nodes"></i
-                          ><span class="off m-lg-2">Redes Social</span></a
-                        >
-                      </li>
-                      <li>
-                        <a class="dropdown-item" href="contacto.html">
-                          <i class="fa-solid fa-envelope"></i
-                          ><span class="off m-lg-2">Formulario</span></a
-                        >
-                      </li>
-                      <li>
-                        <hr class="dropdown-divider" />
-                      </li>
-                      <li>
-                        <a class="dropdown-item" href="../index.html">
-                          <i class="fa-solid fa-house-chimney"></i
-                          ><span class="off m-lg-2">Volver a Home</span></a
-                        >
-                      </li>
-                    </ul>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </nav>
+        <a class="navbar-brand" href="#">
+            <img src="../img/logo2.png" class="img-fluid" width="180px" height="180px" alt="logo">
+        </a>
+            
+        <!-- boton del menu -->
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+          <!-- elementos del menu colapsable -->
+
+        <div class="collapse navbar-collapse" id="menu">
+          <ul class="navbar-nav me-auto m-3">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="../index.html">Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="nosotros.html">Nosotros</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="servicios.html">Servicios</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="galeria.html">Galería</a>
+          </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Contacto
+              </a>
+
+              <ul class="dropdown-menu bg-secondary" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="red-social.html">Redes Sociales</a></li>
+                <li><a class="dropdown-item" href="contacto.html">Formulario</a><li>   
+              </ul>
+            </li>
+          </ul>
+
+          <hr class="d-md-none text-white-50">
+
+           <!-- enlaces redes sociales -->
+
+          <ul class="navbar-nav  flex-row flex-wrap text-light">
+           <li class="nav-item col-6 col-md-auto p-3">
+                <i class="bi bi-twitter"></i>
+                <a href="https://www.twitter.com" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+                <small class="d-md-none ms-2">Twitter</small>  
+            </li>
+
+            <li class="nav-item col-6 col-md-auto p-3">
+              <i class="bi bi-instagram"></i>
+              <a href="https://www.instagram.com" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+              <small class="d-md-none ms-2">Instagram</small> 
+            </li>
+
+            <li class="nav-item col-6 col-md-auto p-3">
+              <i class="bi bi-whatsapp"></i>
+              <a href="https://www.whatsApp.com" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+              <small class="d-md-none ms-2">WhatsApp</small>
+            </li>
+
+            <li class="nav-item col-6 col-md-auto p-3">
+              <a href="https://www.facebook.com" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+              <small class="d-md-none ms-2">Facebook</small>
+            </li>
+          </ul>
+         <!--boton Informacion -->
+
+          <form class="d-flex">
+            <button class="btn btn-outline-warning d-none d-md-inline-block m-4" type="submit">Mas Información</button>
+          </form>
         </div>
-      </div>
+        </div>  
+      </nav>
+
     </header>
 
     <main>

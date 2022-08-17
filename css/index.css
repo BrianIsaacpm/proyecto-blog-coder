@@ -29,51 +29,78 @@ main {
   flex-grow: 1;
 }
 
+.flex__item-home h2 {
+ font-weight: bold;
+}
+
 
 footer {
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   padding: 1rem;
   background-color: #222;
   color: #eee;
 }
 
+
+
 /* /////// NAVBAR Bootstrap ///////// */
   
 
-
-.titulares {
-  max-width: 100vw;
-  position:sticky;
-  height: 0.01em;
-  z-index: 110;
-  top: -16px;
+header  {
+font-size: 1.6rem;
+position: sticky;
+z-index: 110;
+top: 0;
 }
 
-.row {
-  position:sticky;
-  top: 50px;
-}
-
-.navbar {
-  height: 10rem;
-}
-
-.container-fluid {
+button.btn {
   font-size: 1.6rem;
-  padding: 2rem;
 }
 
-.navbar-brand img {
-  text-align: center;
-  width: 17rem;
+button.navbar-toggler {
+  height: 4rem;
+  width: 4rem;
 }
 
-.navbar-brand {
-  height: 12rem;
+span.navbar-toggler-icon {
+  height: 2.5rem;
+  width: 2.5rem;
 }
 
-.nav-link {
-  text-align: center;
+.fa-twitter {
+  color: white;
+}
+
+.fa-instagram {
+  color: white;
+}
+
+.fa-whatsapp {
+  color: white;
+}
+
+.fa-facebook {
+  color: white;
+}
+
+.fa-twitter:hover {
+  color: #ffc107;
+  transition: .5s;
+}
+
+.fa-instagram:hover {
+  color: #ffc107;
+  transition: .5s;
+}
+
+.fa-whatsapp:hover {
+  color: #ffc107;
+  transition: .5s;
+}
+
+.fa-facebook:hover {
+  color: #ffc107;
+  transition: .5s;
 }
 
 /*///////////////////////////////////////*/
@@ -228,31 +255,6 @@ grid-area:section__article-about1;
   margin-bottom: 2rem;
 }
 
-/* /////// Galeria Bootstrap ///////// */
-  
-
-  .dropdown-item {
-    font-size: 1.6rem;
-  }
-  
-  #galeria .text-center {
-    font-size: 1.6rem;
-  }
-  
-  #galeria .col-lg-4 {
-    padding: 2.5rem;
-  }
-  
-  #galeria img {
-    width: 100%;
-    height: 55rem;
-  }
-  
-  #galeria img:hover {
-   border: 5px solid #f7f7f7;
-  }
-  
-  /* //////////////////////////////////////////// */
 
 /* CSS Servicios */
 
@@ -295,30 +297,52 @@ grid-area:section__article-about1;
   align-items: center;
 }
 
-.flex__item-service h2 {
-  font-size: xx-large;
-  margin-bottom: 5rem;
-  text-transform: bold;
+.flex__item-service h3 {
+  font-size: 2rem;
+  margin-bottom: 3rem;
+  font-weight: bold;
 }
 
 .flex__item-service {
   font-size: xx-large;
   margin-bottom: 5rem;
-  text-align: center;
+  
   flex: 0 0 40%;
   margin: 1rem;
 }
 
-article.flex__item-service h3 {
-  font-size: 2rem;
-  margin-bottom: 3rem;
-}
 
 .flex__container-service img {
     height: 38vh;
     width: 38vh;
     border-radius: 50%;
 }
+
+/* /////// Galeria Bootstrap ///////// */
+  
+
+.dropdown-item {
+  font-size: 1.6rem;
+}
+
+#galeria .text-center {
+  font-size: 1.6rem;
+}
+
+#galeria .col-lg-4 {
+  padding: 2.5rem;
+}
+
+#galeria img {
+  width: 100%;
+  height: 55rem;
+}
+
+#galeria img:hover {
+ border: 5px solid #f7f7f7;
+}
+
+/* //////////////////////////////////////////// */
 
 
 /* CSS RedSocial */
@@ -358,7 +382,7 @@ article.flex__item-service h3 {
 .container__redsocial{
   display: flex;
   justify-content: center;
-  height: 100vh;
+  height: 90vh;
   align-content:flex-start;
   align-items: center;
 }
@@ -376,6 +400,10 @@ article.flex__item-service h3 {
   background-color: rgba(255, 255, 255, 0.80);
   border: .2rem solid rgba(255, 255, 255, 0.233);
   color: var(--white-text);
+}
+
+.h3__redsocial {
+  font-weight: bold;
 }
 
 
@@ -455,17 +483,21 @@ h4 {
   border: 0.2rem solid rgba(255, 255, 255, 0.699);
 }
 
+.button a {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+}
+
+
 .button:hover {
   background-color: rgba(134, 36, 85, 0.85);
   border: 0.2rem solid rgba(255, 255, 255, 0.699);
   transition: 0.5s;
 }
 
-.button a {
+.button a:hover {
   color: rgb(255, 255, 255);
-  text-decoration: none;
 }
-
 
 
 /* CSS Contacto */
@@ -597,6 +629,11 @@ h4 {
   margin: 0 0 1rem 0;
 }
 
+.contact-info ul {
+  position: relative;
+  right: 20px;
+}
+
 .contact-info p {
   font-size: 1.6rem;
 }
@@ -700,24 +737,24 @@ h4 {
 }
 
 
-.card .links a {
+.card .links i {
   font-size: 20px;
   color: #000000;
 }
 
-.card .links a:nth-child(1):hover {
+.card .links .fa-facebook:hover {
   color: #0158ca;
 }
 
-.card .links a:nth-child(2):hover {
+.card .links .fa-twitter:hover {
   color: #1C93E4;
 }
 
-.card .links a:nth-child(3):hover {
+.card .links .fa-instagram:hover {
   color: #f025c4;
 }
 
-.card .links a:nth-child(4):hover {
+.card .links .fa-whatsapp:hover {
   color: #1bc224c2;
 }
 
@@ -740,18 +777,12 @@ h4 {
   
 
 @media screen and (max-width: 1200px) {
+
    /* ////////////   INDEX   ///////////////*/
  
    footer {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     text-align: center;
-  }
-  
-  .titulares {
-    height: 9rem;
-  }
-  .hero__image {
-    min-height: 60vh;
   }
   
    h1 {
@@ -801,7 +832,7 @@ h4 {
     margin-bottom: 10rem;
   }
 
-  article.flex__item-service h3 {
+  .flex__item-service h3 {
     text-align: center;
   }
 
@@ -817,9 +848,6 @@ h4 {
     min-height: 40vh;
   }
 
-
-
-
 }
 
  
@@ -833,9 +861,6 @@ h4 {
      text-align: center;
    }
    
-   .titulares {
-     height: 9rem;
-   }
    
    .header__home {
      justify-content: space-between;
@@ -862,15 +887,6 @@ h4 {
      order: 0;
    }
    
-   h2 {
-     font-size: 3rem;
-     margin-bottom: 5rem;
-   }
-
-   p {
-     margin: 2rem;
-     font-size: 1.6rem;
-   }
    
    img.img__article-home {
    width: 40vh;
@@ -901,10 +917,6 @@ h4 {
  
  /* ////////////   SERVICIOS   ///////////////*/
  
- .hero__image-services {
-   min-height: 45vh;
- }
- 
  
  .hero__image-services h1 {
    font-size: 4vh;
@@ -918,7 +930,7 @@ h4 {
    margin-bottom: 10rem;
  }
  
- article.flex__item-service h3 {
+ .flex__item-service h3 {
    font-size: 2.5rem;
    text-align: center;
  }
@@ -931,10 +943,6 @@ h4 {
  
  
  /* ////////////   RED SOCIAL   ///////////////*/
- 
- .hero__image-red-social {
-   min-height: 40vh;
- }
  
  
  .hero__image-red-social h1 {
@@ -953,7 +961,6 @@ h4 {
    width: 27rem;
    height: 35rem;
  }
- 
  
  .h3__redsocial {
    font-size: 1.7rem;
@@ -1030,7 +1037,7 @@ h4 {
 
  .container__card {
   position: relative;
-  top: -200px;
+  top: -150px;
   flex-direction: column;
   align-content: center;
   justify-content: center;
@@ -1041,20 +1048,6 @@ h4 {
 
 }
 
-@media only screen and (max-width: 751px) {
-
-  /* ////////////   INDEX   ///////////////*/
- 
-  .off {
-    display: none;
-   }
-
-   .menu li > a > i {
-    font-size: 2rem;
-    margin-right: 2rem;
-  }
-
-}
 
 
 @media only screen and (max-width: 576px) {
@@ -1062,9 +1055,6 @@ h4 {
  
  /* ////////////   INDEX   ///////////////*/
 
- .off {
-  display: none;
- }
 
   img.img__article-home {
   width: 30vh;
@@ -1096,14 +1086,5 @@ h4 {
       flex-direction: column; 
   }
 
-
 }
 
-@media only screen and (max-width: 558px) {
-
-  div.logo img {
-    display: none;
-    width: 1rem;
-  }
-
-}
