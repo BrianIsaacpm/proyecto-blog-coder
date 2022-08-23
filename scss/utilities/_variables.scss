@@ -6,3 +6,17 @@ $color-secundario: #eee;
 $color-hover-inav: #ffc107;
 $color-li-principal: #fff;
 $img-radius: 50%;
+
+$breakpoints: (
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px
+);
+
+@mixin media-up($breakpoint) {
+  @media screen and (max-width: map-get($breakpoints, $breakpoint)) {
+    @content;
+  }
+}

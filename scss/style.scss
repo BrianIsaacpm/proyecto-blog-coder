@@ -1,6 +1,11 @@
 @import "utilities/variables";
 
 
+
+
+
+
+
 /*  INDEX   NESTING  */
 
 
@@ -10,122 +15,27 @@ html {
 
     *, *::after {
         font-family: sans-serif;
-        box-sizing: inherit;
+        box-sizing: border-box;
         margin: $marginpadding-reset;
         padding: $marginpadding-reset;
     }
 }
 
      
-body {
 
-    header  {
-        font-size: 1.6rem;
-        position: sticky;
-        z-index: 110;
-        top: 0;
+
+  header  {
+    font-size: 1.6rem;
+    position: sticky;
+    z-index: 110;
+    top: 0;
        
     
-    }
-    main {
-        flex-grow: 1;
-    
-        article.hero__image {
-            min-height: 100vh;
-            background-image: url(../img/hero-image.jpg);
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-attachment: fixed;
-            color: $color-li-principal;
-    
-            .hero__image div {
-                min-height: inherit;
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-                text-align: center;
-                background-color: rgba(0, 0, 0, .50);
-                
-                .hero__image h1 {
-                    font-size: 5vh;
-                    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-                    text-shadow: 0 0 4px rgb(196, 157, 32), 0 0 5px rgb(255, 230, 0), 0 0 3px rgb(255, 217, 0), 0 0 7px rgb(255, 102, 0); 
-                }
-                
-                img {
-                    max-width: 100%;
-                    height: auto;
-                    margin: 10px;
-                }
-    
-                .hero__image img {
-                    width: 20rem;
-                    height: 20rem;
-                }
-            }
-        }
-    
-        .flex__container-home {
-            margin-left:auto;
-            margin-right: auto;
-            margin-top: 3rem;
-                margin-bottom: 3rem;
-                display: flex;
-                justify-content: center;
-                align-content: center;
-                align-items: center;
-    
-                .flex__item-home {
-                    flex: 0 0 40%;
-    
-                    .flex__item-home h2 {
-                        font-size: xx-large;
-                        margin-bottom: 5rem;
-                        text-align: center;
-                        font-weight: bold;
-                    }
-    
-                    p {
-                        font-size: 2rem;
-                    }
-                }
-    
-                .flex__order-1 {
-                    order: 1;
-                }
-    
-                img.img__article-home {
-                    width: 40vh;
-                    height: 40vh;
-                    border-radius: $img-radius;
-                    margin: 0 5rem;
-                }
-                  
-            }
-    
-    }
-    footer {
-        font-size: 1.4rem;
-        padding: 1rem;
-        background-color: $color-footer;
-        color: $color-secundario;
-    }
-}
+  }
 
 
 
-
-  
-
-
-
-
-
-
-
-
-
+  // Bootstrap Nav Style //
 
 
 
@@ -181,6 +91,143 @@ span.navbar-toggler-icon {
 }
 
 /*///////////////////////////////////////*/
+
+
+  main {
+    flex-grow: 1;
+    
+    .hero__image {
+      min-height: 100vh;
+      background-image: url(../img/hero-image.jpg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-attachment: fixed;
+      color: $color-li-principal;
+
+      @include media-up(xl) {
+        min-height: 70vh;
+     }
+
+      @include media-up(md) {
+        min-height: 60vh;
+     }
+  
+       div {
+        display: flex;
+        min-height: inherit;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        background-color: rgba(0, 0, 0, .50);
+        
+         h1 {
+          font-size: 5vh;
+          font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+          text-shadow: 0 0 4px rgb(196, 157, 32), 0 0 5px rgb(255, 230, 0), 0 0 3px rgb(255, 217, 0), 0 0 7px rgb(255, 102, 0);
+                    
+          @include media-up(lg) {
+              font-size: 4vh;
+          }
+        
+        }
+        img {
+          width: 20rem;
+          height: 20rem;
+        }  
+      }
+    }
+    
+    .flex__container-home {
+      margin-left:auto;
+      margin-right: auto;
+      margin-top: 3rem;
+      margin-bottom: 3rem;
+      display: flex;
+      justify-content: center;
+      align-content: center;
+      align-items: center;
+
+      @include media-up(lg) {
+        margin-top: 3rem;
+        margin-bottom: 7rem;
+        gap: 2rem;
+      }
+    
+      .flex__item-home {
+        flex: 0 0 40%;
+
+        @include media-up(lg){
+          margin-top: 5rem;
+          margin-bottom: 2rem;
+        }
+    
+        h2 {
+          font-size: xx-large;
+          margin-bottom: 4rem;
+          font-weight: bold;
+
+          @include media-up(xl){
+            text-align: center;
+            font-size: 3rem;
+            margin-bottom: 4rem;
+          } 
+        }
+    
+          p {
+            font-size: 2rem;
+          }
+      }
+      
+      .flex__order-1 {
+        order: 1;
+
+        @include media-up(xl) {
+          order: 0;
+        }
+      }
+    
+      img.img__article-home {
+        width: 40vh;
+        height: 40vh;
+        border-radius: $img-radius;
+        margin: 0 5rem;
+        
+
+        @include media-up(xl) {
+          width: 35vh;
+          height: 35vh;
+          margin-bottom: 4rem;
+        }
+
+        @include media-up(lg) {
+          width: 43vh;
+          height: 43vh;
+        }  
+      } 
+    }
+  }
+
+  footer {
+    font-size: 1.4rem;
+    padding: 1rem;
+    background-color: $color-footer;
+    color: $color-secundario;
+    text-align: center;
+      
+  }  
+
+
+
+  
+
+
+
+
+
+
+
+
 
 
 
@@ -823,9 +870,7 @@ h4 {
     gap: 2rem;
   }
   
-  .flex__order-1 {
-    order: 1;
-  }
+ 
   
   h2 {
     font-size: 3rem;
@@ -883,17 +928,6 @@ h4 {
 
   /* ////////////   INDEX   ///////////////*/
  
- 
-   footer {
-     font-size: 1.2rem;
-     text-align: center;
-   }
-   
-   
-   .header__home {
-     justify-content: space-between;
-   }
-   
  
    
    .menu img {
@@ -1078,39 +1112,33 @@ h4 {
 
 
 
-@media only screen and (max-width: 576px) {
-
+ @media only screen and (max-width: 576px) {
  
- /* ////////////   INDEX   ///////////////*/
-
-
-  img.img__article-home {
-  width: 30vh;
-  height: 30vh;
+  
+  
+ 
+    /* ////////////   NOSOTROS   ///////////////*/
+ 
+ 
+   .container__about img {
+     width: 20vh;
+     height: 20vh;
+   }
+ 
+ 
+    /* ////////////   SERVICIOS   ///////////////*/
+ 
+ 
+   .flex__container-service img {
+     width: 30vh;
+     height: 30vh;
+   }
+ 
+ 
+    /* ////////////   RED SOCIAL  ///////////////*/
+ 
+ 
+   .container__redsocial {
+       flex-direction: column; 
+   }
   }
-
-   /* ////////////   NOSOTROS   ///////////////*/
-
-
-  .container__about img {
-    width: 20vh;
-    height: 20vh;
-  }
-
-
-   /* ////////////   SERVICIOS   ///////////////*/
-
-
-  .flex__container-service img {
-    width: 30vh;
-    height: 30vh;
-  }
-
-
-   /* ////////////   RED SOCIAL  ///////////////*/
-
-
-  .container__redsocial {
-      flex-direction: column; 
-  }
-}

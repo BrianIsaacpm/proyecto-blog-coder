@@ -4,75 +4,15 @@ html {
   box-sizing: border-box; }
   html *, html *::after {
     font-family: sans-serif;
-    box-sizing: inherit;
+    box-sizing: border-box;
     margin: 0;
     padding: 0; }
 
-body header {
+header {
   font-size: 1.6rem;
   position: sticky;
   z-index: 110;
   top: 0; }
-
-body main {
-  flex-grow: 1; }
-  body main article.hero__image {
-    min-height: 100vh;
-    background-image: url(../img/hero-image.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-    color: #fff; }
-    body main article.hero__image .hero__image div {
-      min-height: inherit;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      background-color: rgba(0, 0, 0, 0.5); }
-      body main article.hero__image .hero__image div .hero__image h1 {
-        font-size: 5vh;
-        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-        text-shadow: 0 0 4px #c49d20, 0 0 5px #ffe600, 0 0 3px #ffd900, 0 0 7px #ff6600; }
-      body main article.hero__image .hero__image div img {
-        max-width: 100%;
-        height: auto;
-        margin: 10px; }
-      body main article.hero__image .hero__image div .hero__image img {
-        width: 20rem;
-        height: 20rem; }
-  body main .flex__container-home {
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 3rem;
-    margin-bottom: 3rem;
-    display: flex;
-    justify-content: center;
-    align-content: center;
-    align-items: center; }
-    body main .flex__container-home .flex__item-home {
-      flex: 0 0 40%; }
-      body main .flex__container-home .flex__item-home .flex__item-home h2 {
-        font-size: xx-large;
-        margin-bottom: 5rem;
-        text-align: center;
-        font-weight: bold; }
-      body main .flex__container-home .flex__item-home p {
-        font-size: 2rem; }
-    body main .flex__container-home .flex__order-1 {
-      order: 1; }
-    body main .flex__container-home img.img__article-home {
-      width: 40vh;
-      height: 40vh;
-      border-radius: 50%;
-      margin: 0 5rem; }
-
-body footer {
-  font-size: 1.4rem;
-  padding: 1rem;
-  background-color: #222;
-  color: #eee; }
 
 button.btn {
   font-size: 1.6rem; }
@@ -114,6 +54,97 @@ span.navbar-toggler-icon {
   transition: .5s; }
 
 /*///////////////////////////////////////*/
+main {
+  flex-grow: 1; }
+  main .hero__image {
+    min-height: 100vh;
+    background-image: url(../img/hero-image.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    color: #fff; }
+    @media screen and (max-width: 1200px) {
+      main .hero__image {
+        min-height: 70vh; } }
+    @media screen and (max-width: 768px) {
+      main .hero__image {
+        min-height: 60vh; } }
+    main .hero__image div {
+      display: flex;
+      min-height: inherit;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      background-color: rgba(0, 0, 0, 0.5); }
+      main .hero__image div h1 {
+        font-size: 5vh;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        text-shadow: 0 0 4px #c49d20, 0 0 5px #ffe600, 0 0 3px #ffd900, 0 0 7px #ff6600; }
+        @media screen and (max-width: 992px) {
+          main .hero__image div h1 {
+            font-size: 4vh; } }
+      main .hero__image div img {
+        width: 20rem;
+        height: 20rem; }
+  main .flex__container-home {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center; }
+    @media screen and (max-width: 992px) {
+      main .flex__container-home {
+        margin-top: 3rem;
+        margin-bottom: 7rem;
+        gap: 2rem; } }
+    main .flex__container-home .flex__item-home {
+      flex: 0 0 40%; }
+      @media screen and (max-width: 992px) {
+        main .flex__container-home .flex__item-home {
+          margin-top: 5rem;
+          margin-bottom: 2rem; } }
+      main .flex__container-home .flex__item-home h2 {
+        font-size: xx-large;
+        margin-bottom: 4rem;
+        font-weight: bold; }
+        @media screen and (max-width: 1200px) {
+          main .flex__container-home .flex__item-home h2 {
+            text-align: center;
+            font-size: 3rem;
+            margin-bottom: 4rem; } }
+      main .flex__container-home .flex__item-home p {
+        font-size: 2rem; }
+    main .flex__container-home .flex__order-1 {
+      order: 1; }
+      @media screen and (max-width: 1200px) {
+        main .flex__container-home .flex__order-1 {
+          order: 0; } }
+    main .flex__container-home img.img__article-home {
+      width: 40vh;
+      height: 40vh;
+      border-radius: 50%;
+      margin: 0 5rem; }
+      @media screen and (max-width: 1200px) {
+        main .flex__container-home img.img__article-home {
+          width: 35vh;
+          height: 35vh;
+          margin-bottom: 4rem; } }
+      @media screen and (max-width: 992px) {
+        main .flex__container-home img.img__article-home {
+          width: 43vh;
+          height: 43vh; } }
+
+footer {
+  font-size: 1.4rem;
+  padding: 1rem;
+  background-color: #222;
+  color: #eee;
+  text-align: center; }
+
 /* CSS Nosotros */
 .hero__image-about {
   min-height: 60vh;
@@ -599,8 +630,6 @@ h4 {
     margin-top: 3rem;
     margin-bottom: 10rem;
     gap: 2rem; }
-  .flex__order-1 {
-    order: 1; }
   h2 {
     font-size: 3rem;
     margin-bottom: 5rem; }
@@ -629,11 +658,6 @@ h4 {
 
 @media only screen and (max-width: 992px) {
   /* ////////////   INDEX   ///////////////*/
-  footer {
-    font-size: 1.2rem;
-    text-align: center; }
-  .header__home {
-    justify-content: space-between; }
   .menu img {
     height: 1.2rem;
     width: 1.2rem;
@@ -733,10 +757,6 @@ h4 {
     align-items: center; } }
 
 @media only screen and (max-width: 576px) {
-  /* ////////////   INDEX   ///////////////*/
-  img.img__article-home {
-    width: 30vh;
-    height: 30vh; }
   /* ////////////   NOSOTROS   ///////////////*/
   .container__about img {
     width: 20vh;
