@@ -5,101 +5,157 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./css/styles.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link
-    href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
-    rel="stylesheet"
-    integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
-    crossorigin="anonymous"
-  />
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+      crossorigin="anonymous"
+    />
     <title>Home - Salon Mariela</title>
   </head>
   <body>
     <header>
-
       <!-- Inicio del menu -->
-    
+
       <nav class="navbar navbar-expand-md navbar-dark bg-dark">
         <div class="container-fluid">
+          <!-- Logo -->
 
-        <!-- Logo -->
+          <a class="navbar-brand" href="#">
+            <img
+              src="./img/logo2.png"
+              class="img-fluid"
+              width="180px"
+              height="180px"
+              alt="logo"
+            />
+          </a>
 
-        <a class="navbar-brand" href="#">
-            <img src="./img/logo2.png" class="img-fluid" width="180px" height="180px" alt="logo">
-        </a>
-            
-        <!-- boton del menu -->
+          <!-- boton del menu -->
 
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#menu"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
             <span class="navbar-toggler-icon"></span>
-        </button>
+          </button>
 
           <!-- elementos del menu colapsable -->
 
-        <div class="collapse navbar-collapse" id="menu">
-          <ul class="navbar-nav me-auto m-3">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Inicio</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" aria-current="page" href="pages/nosotros.html">Nosotros</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="pages/servicios.html">Servicios</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="pages/galeria.html">Galería</a>
-          </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Contacto
-              </a>
+          <div class="collapse navbar-collapse" id="menu">
+            <ul class="navbar-nav me-auto m-3">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#"
+                  >Inicio</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  aria-current="page"
+                  href="pages/nosotros.html"
+                  >Nosotros</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="pages/servicios.html">Servicios</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="pages/galeria.html">Galería</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  id="navbarDropdown"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Contacto
+                </a>
 
-              <ul class="dropdown-menu bg-secondary" aria-labelledby="navbarDropdown">
-                <li><a class="dropdown-item" href="pages/red-social.html">Redes Sociales</a></li>
-                <li><a class="dropdown-item" href="pages/contacto.html">Formulario</a><li>   
-              </ul>
-            </li>
-          </ul>
+                <ul
+                  class="dropdown-menu bg-secondary"
+                  aria-labelledby="navbarDropdown"
+                >
+                  <li>
+                    <a class="dropdown-item" href="pages/red-social.html"
+                      >Redes Sociales</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="pages/contacto.html"
+                      >Formulario</a
+                    >
+                  </li>
+                  <li></li>
+                </ul>
+              </li>
+            </ul>
 
-          <hr class="d-md-none text-white-50">
+            <hr class="d-md-none text-white-50" />
 
-           <!-- enlaces redes sociales -->
+            <!-- enlaces redes sociales -->
 
-          <ul class="navbar-nav  flex-row flex-wrap text-light">
-           <li class="nav-item col-6 col-md-auto p-3">
+            <ul class="navbar-nav flex-row flex-wrap text-light">
+              <li class="nav-item col-6 col-md-auto p-3">
                 <i class="bi bi-twitter"></i>
-                <a href="https://www.twitter.com" target="_blank"><i class="fa-brands fa-twitter"></i></a>
-                <small class="d-md-none ms-2">Twitter</small>  
-            </li>
+                <a href="https://www.twitter.com" target="_blank"
+                  ><i class="fa-brands fa-twitter"></i
+                ></a>
+                <small class="d-md-none ms-2">Twitter</small>
+              </li>
 
-            <li class="nav-item col-6 col-md-auto p-3">
-              <i class="bi bi-instagram"></i>
-              <a href="https://www.instagram.com" target="_blank"><i class="fa-brands fa-instagram"></i></a>
-              <small class="d-md-none ms-2">Instagram</small> 
-            </li>
+              <li class="nav-item col-6 col-md-auto p-3">
+                <i class="bi bi-instagram"></i>
+                <a href="https://www.instagram.com" target="_blank"
+                  ><i class="fa-brands fa-instagram"></i
+                ></a>
+                <small class="d-md-none ms-2">Instagram</small>
+              </li>
 
-            <li class="nav-item col-6 col-md-auto p-3">
-              <i class="bi bi-whatsapp"></i>
-              <a href="https://www.whatsApp.com" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
-              <small class="d-md-none ms-2">WhatsApp</small>
-            </li>
+              <li class="nav-item col-6 col-md-auto p-3">
+                <i class="bi bi-whatsapp"></i>
+                <a href="https://www.whatsApp.com" target="_blank"
+                  ><i class="fa-brands fa-whatsapp"></i
+                ></a>
+                <small class="d-md-none ms-2">WhatsApp</small>
+              </li>
 
-            <li class="nav-item col-6 col-md-auto p-3">
-              <a href="https://www.facebook.com" target="_blank"><i class="fa-brands fa-facebook"></i></a>
-              <small class="d-md-none ms-2">Facebook</small>
-            </li>
-          </ul>
+              <li class="nav-item col-6 col-md-auto p-3">
+                <a href="https://www.facebook.com" target="_blank"
+                  ><i class="fa-brands fa-facebook"></i
+                ></a>
+                <small class="d-md-none ms-2">Facebook</small>
+              </li>
+            </ul>
 
-         <!--boton Informacion -->
+            <!--boton Informacion -->
 
-          <form class="d-flex">
-            <button class="btn btn-outline-warning d-none d-md-inline-block m-4" type="submit">Mas Información</button>
-          </form>
+            <form class="d-flex">
+              <button
+                class="btn btn-outline-warning d-none d-md-inline-block m-4"
+                type="submit"
+              >
+                Mas Información
+              </button>
+            </form>
+          </div>
         </div>
-        </div>  
       </nav>
-
     </header>
 
     <main>
@@ -107,23 +163,28 @@
         <div>
           <h1>¡CUIDA TU CABELLO!</h1>
           <img src="./img/logo1.png" alt="logo" />
-        </div> 
+        </div>
       </article>
       <section class="flex__container-home">
         <article class="flex__item-home">
           <h2>Quienes Somos</h2>
           <p>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Modi
-            repudiandae ab accusamus alias dolore quasi atque dignissimos!
-            Impedit rerum quaerat iure veniam ab alias, fugit itaque, voluptas
-            ipsum, porro laborum Lorem, ipsum dolor sit amet consectetur
-            adipisicing elit. Iusto, nulla. Nihil, quam eaque facilis fugit
-            corrupti eos est, a repudiandae voluptate animi, architecto
-            exercitationem soluta hic quisquam quod. Atque, sed! Lorem ipsum
-            dolor sit amet, consectetur adipisicing elit. Architecto odio vitae,
-            inventore vel fugit accusamus veritatis autem aliquam eum, quae
-            quibusdam possimus eveniet ipsum ducimus quod mollitia, ipsa ad
-            illum!
+            Salon Mariela es un salón diseñado para que nuestros clientes
+            disfruten de una experiencia única. Los espacios y la distribución
+            del salón buscan transmitir un balance entre lo natural y lo
+            fashion, lo elegante y lo trendy, así como la calidez propia de la
+            luz natural que invita a la sofisticación, la elegancia y a la
+            exclusividad en el gusto por el diseño. En Salon Mariela estamos a
+            la vanguardia. Seguimos las nuevas tendencias, nuevos estilos y
+            productos para que nuestros clientes obtengan lo mejor. Ofrecemos un
+            servicio de primera clase en color, corte, tratamientos y peinados.
+            Además de un exclusivo servicio de make-up. De parte de nuestro
+            personal que recibe capacitaciones constantes en cada una de las
+            especializaciones de belleza y son dirigidos por nuestro director
+            artí­stico, Mariela Suarez. La permanente capacitación de su
+            personal, así­ como la atención entregada, les ha otorgado el
+            reconocimiento de sus pares y un espacio en el mundo de la
+            peluquería.
           </p>
         </article>
         <article>
@@ -134,38 +195,38 @@
         <article class="flex__item-home flex__order-1">
           <h2>Trabajos</h2>
           <p>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Modi
-            repudiandae ab accusamus alias dolore quasi atque dignissimos!
-            Impedit rerum quaerat iure veniam ab alias, fugit itaque, volupta
-            ipsum, porro laborum Lorem, ipsum dolor sit amet consectetur
-            adipisicing elit. Iusto, nulla. Nihil, quam eaque facilis fugit
-            corrupti eos est, a repudiandae voluptate animi, architecto
-            exercitationem soluta hic quisquam quod. Atque, sed! Lorem ipsum
-            dolor sit amet, consectetur adipisicing elit. Architecto odio vitae,
-            inventore vel fugit accusamus veritatis autem aliquam eum, quae
-            quibusdam possimus eveniet ipsum ducimus quod mollitia, ipsa ad
-            illum!
+            Uno de los trabajos de peluquería más populares es el de cortar el
+            cabello. Esto implica más que solo poder cortar en línea recta y sin
+            etiquetas ni corredores aéreos. Los barberos deben aprender una
+            variedad de estilos y cortes. La mayoría de los clientes tienen un
+            estilo en mente cuando ingresan a un salón, y el barbero debe ser
+            capaz de evitar perder al cliente. Esta especialidad generalmente
+            requiere un entrenamiento especializado en cosmetología, con
+            exámenes escritos y prácticos para evaluar las habilidades del
+            estilista. <br> El técnico de champú es quizás el menos experto de todos
+            los peluqueros y estilistas. El papel de esta persona implica lavar
+            y acondicionar el cabello de un cliente antes de cortarlo y
+            peinarlo. También se le puede pedir que se peine, atienda el
+            teléfono y limpie los recortes después de que un cliente haya sido
+            estilizado. En algunos casos, el técnico de champú es en realidad un
+            peluquero en formación y puede estar aprendiendo con estilistas más
+            experimentados hasta que termine sus estudios.
           </p>
         </article>
         <article>
-          <img class="img__article-home" src="/img/barba.jpg" alt="" />
+          <img class="img__article-home" src="img/barba.jpg" alt="" />
         </article>
       </section>
       <section class="flex__container-home">
         <article class="flex__item-home">
           <h2>Variedad</h2>
           <p>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Modi
-            repudiandae ab accusamus alias dolore quasi atque dignissimos!
-            Impedit rerum quaerat iure veniam ab alias, fugit itaque, voluptas
-            ipsum, porro laborum Lorem, ipsum dolor sit amet consectetur
-            adipisicing elit. Iusto, nulla. Nihil, quam eaque facilis fugit
-            corrupti eos est, a repudiandae voluptate animi, architecto
-            exercitationem soluta hic quisquam quod. Atque, sed! Lorem ipsum
-            dolor sit amet, consectetur adipisicing elit. Architecto odio vitae,
-            inventore vel fugit accusamus veritatis autem aliquam eum, quae
-            quibusdam possimus eveniet ipsum ducimus quod mollitia, ipsa ad
-            illum!
+            Nosotros estamos constantentemente lavando, acondicionando, secando,
+            cortando, estilizando, realizamos la permanente, alisamos y tiñimos
+            el pelo. También estamos constantemente aconsejando a nuestros
+            clientes sobre productos para el pelo que se venden en las mejores
+            tiendas del mundo. Realizamos tareas de recepción y nos ocupamos tu
+            bolsillo realizando el mejor servicio al menor costo posible.
           </p>
         </article>
         <article>
@@ -174,8 +235,6 @@
       </section>
     </main>
     <footer><b>Todos los derechos reservados &copy;</b></footer>
-
-
 
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"

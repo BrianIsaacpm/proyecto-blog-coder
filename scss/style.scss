@@ -12,7 +12,6 @@
 html {
     font-size:  62.5%;
     box-sizing: border-box;
-
     *, *::after {
         font-family: sans-serif;
         box-sizing: border-box;
@@ -20,7 +19,6 @@ html {
         padding: $marginpadding-reset;
     }
 }
-
      
 
 
@@ -30,67 +28,63 @@ html {
     z-index: 110;
     top: 0;
        
-    
+    // Bootstrap Nav Style //
+
+
+
+
+    button.btn {
+      font-size: 1.6rem;
+    }
+
+    button.navbar-toggler {
+      height: 4rem;
+      width: 4rem;
+    }
+
+    span.navbar-toggler-icon {
+      height: 2.5rem;
+      width: 2.5rem;
+    }
+
+    .fa-twitter {
+      color: $color-li-principal;
+    }
+
+    .fa-instagram {
+      color: $color-li-principal;
+    }
+
+    .fa-whatsapp {
+      color: $color-li-principal;
+    }
+
+    .fa-facebook {
+      color: $color-li-principal;
+    }
+
+    .fa-twitter:hover {
+      color: $color-hover-inav;
+      transition: .5s;
+    }
+
+    .fa-instagram:hover {
+      color: $color-hover-inav;
+      transition: .5s;
+    }
+
+    .fa-whatsapp:hover {
+      color: $color-hover-inav;
+      transition: .5s;
+    }
+
+    .fa-facebook:hover {
+      color: $color-hover-inav;
+      transition: .5s;
+    }
+
+    /*///////////////////////////////////////*/
   }
-
-
-
-  // Bootstrap Nav Style //
-
-
-
-
-button.btn {
-  font-size: 1.6rem;
-}
-
-button.navbar-toggler {
-  height: 4rem;
-  width: 4rem;
-}
-
-span.navbar-toggler-icon {
-  height: 2.5rem;
-  width: 2.5rem;
-}
-
-.fa-twitter {
-  color: $color-li-principal;
-}
-
-.fa-instagram {
-  color: $color-li-principal;
-}
-
-.fa-whatsapp {
-  color: $color-li-principal;
-}
-
-.fa-facebook {
-  color: $color-li-principal;
-}
-
-.fa-twitter:hover {
-  color: $color-hover-inav;
-  transition: .5s;
-}
-
-.fa-instagram:hover {
-  color: $color-hover-inav;
-  transition: .5s;
-}
-
-.fa-whatsapp:hover {
-  color: $color-hover-inav;
-  transition: .5s;
-}
-
-.fa-facebook:hover {
-  color: $color-hover-inav;
-  transition: .5s;
-}
-
-/*///////////////////////////////////////*/
 
 
   main {

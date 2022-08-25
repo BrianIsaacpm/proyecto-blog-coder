@@ -12,48 +12,37 @@ header {
   font-size: 1.6rem;
   position: sticky;
   z-index: 110;
-  top: 0; }
+  top: 0;
+  /*///////////////////////////////////////*/ }
+  header button.btn {
+    font-size: 1.6rem; }
+  header button.navbar-toggler {
+    height: 4rem;
+    width: 4rem; }
+  header span.navbar-toggler-icon {
+    height: 2.5rem;
+    width: 2.5rem; }
+  header .fa-twitter {
+    color: #fff; }
+  header .fa-instagram {
+    color: #fff; }
+  header .fa-whatsapp {
+    color: #fff; }
+  header .fa-facebook {
+    color: #fff; }
+  header .fa-twitter:hover {
+    color: #ffc107;
+    transition: .5s; }
+  header .fa-instagram:hover {
+    color: #ffc107;
+    transition: .5s; }
+  header .fa-whatsapp:hover {
+    color: #ffc107;
+    transition: .5s; }
+  header .fa-facebook:hover {
+    color: #ffc107;
+    transition: .5s; }
 
-button.btn {
-  font-size: 1.6rem; }
-
-button.navbar-toggler {
-  height: 4rem;
-  width: 4rem; }
-
-span.navbar-toggler-icon {
-  height: 2.5rem;
-  width: 2.5rem; }
-
-.fa-twitter {
-  color: #fff; }
-
-.fa-instagram {
-  color: #fff; }
-
-.fa-whatsapp {
-  color: #fff; }
-
-.fa-facebook {
-  color: #fff; }
-
-.fa-twitter:hover {
-  color: #ffc107;
-  transition: .5s; }
-
-.fa-instagram:hover {
-  color: #ffc107;
-  transition: .5s; }
-
-.fa-whatsapp:hover {
-  color: #ffc107;
-  transition: .5s; }
-
-.fa-facebook:hover {
-  color: #ffc107;
-  transition: .5s; }
-
-/*///////////////////////////////////////*/
 main {
   flex-grow: 1; }
   main .hero__image {
