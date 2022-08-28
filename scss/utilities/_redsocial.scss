@@ -1,0 +1,143 @@
+/* CSS RedSocial */
+
+
+main {
+    .hero__image-red-social {
+        min-height: 60vh;
+        max-width: 100vw;
+        background-image: url(../img/hero-image2.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+        color: #fff;
+        
+        div {
+            min-height: inherit;
+            max-width: inherit;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background-color: rgba(0, 0, 0, .65);
+
+            h1 {
+                font-size: 5vh;
+                font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+                text-shadow: 0 0 4px rgb(196, 157, 32), 0 0 5px rgb(255, 230, 0), 0 0 3px rgb(255, 217, 0), 0 0 7px rgb(255, 102, 0); 
+            }
+
+        }
+    }  
+
+    .container__redsocial{
+        display: flex;
+        justify-content: center;
+        height: 90vh;
+        align-content:flex-start;
+        align-items: center;
+
+        .card__redsocial{
+            border-radius: 5rem;
+            box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.6);
+            display: flex;
+            flex-direction: column;
+            margin: 1.5rem;
+            overflow: hidden;
+            width: 30rem;
+            height: 40rem;
+            backdrop-filter: blur(1rem);
+            background-color: rgba(255, 255, 255, 0.80);
+            border: .2rem solid rgba(255, 255, 255, 0.233);
+            color: var(--white-text);
+            .top-row{
+                padding: 0.5rem;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: space-between;
+
+                i {
+                    font-size: 4rem;
+                    margin: 1rem;
+                    color: #E3E3D8;
+                }
+
+                .fa-instagram:hover {
+                    color: #f025c4;
+                    transition: 0.5s;
+                }
+               
+               
+                .fa-twitter:hover {
+                    color: #1C93E4;
+                    transition: 0.5s;
+                }
+        
+                .fa-facebook:hover {
+                    color: #0158ca;
+                    transition: 0.5s;
+                }
+        
+                .fa-youtube:hover {
+                    color: #FE0000;
+                    transition: 0.5s;
+                }
+            
+            }
+            .background-top-row{
+                background-color: rgba(134, 36, 85, 0.85);
+                backdrop-filter: blur(.4rem);
+                
+            }
+
+            .content__redsocial{
+                padding: 2rem;
+                width: 100%;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                justify-content: space-evenly;
+  
+                h2 {
+                    letter-spacing: .1rem;
+                    margin-bottom: 2rem;
+                    font-size: 2rem;
+                    font-weight: bold;
+                }
+
+                p {
+                    font-size: 1.6rem;
+                    margin-top: 1rem;
+                    margin-bottom: 1rem;    
+                }
+
+                .button {
+                    background-color: rgba(85, 37, 65, 0.85);
+                    border-radius: 1.3rem;
+                    color: rgb(255, 255, 255);
+                    font-size: 1rem;
+                    padding: 0.4rem 0.5rem;
+                    letter-spacing: 0.2rem;
+                    align-self: flex-end;
+                    border: 0.2rem solid rgba(255, 255, 255, 0.699);
+
+                     a {
+                        color: rgb(255, 255, 255);
+                        text-decoration: none;
+                    }
+                }
+                .button:hover {
+                    background-color: rgba(134, 36, 85, 0.85);
+                    border: 0.2rem solid rgba(255, 255, 255, 0.699);
+                    transition: 0.5s;
+
+                    .button a:hover {
+                        color: rgb(255, 255, 255);
+                    }
+                }  
+            }
+        }
+    }             
+}  
