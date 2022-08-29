@@ -1,12 +1,13 @@
 @import "utilities/variables";
+@import "utilites/maps";
+@import "utilites/mixin";
+@import "utilites/extend";
+@import "utilites/nav-bootstrap";
 @import "utilities/nosotros";
 @import "utilities/servicios";
 @import "utilities/redsocial";
 @import "utilities/contacto";
-
-
-
-
+@import "utilities/galeria";
 
 
 
@@ -14,13 +15,9 @@
 
 
 html {
-    font-size:  62.5%;
-    box-sizing: border-box;
+    @include html-reset;
     *, *::after {
-        font-family: sans-serif;
-        box-sizing: border-box;
-        margin: $marginpadding-reset;
-        padding: $marginpadding-reset;
+       @include size-reset;
   }
 }     
 
@@ -30,63 +27,6 @@ html {
     position: sticky;
     z-index: 110;
     top: 0;
-       
-    // Bootstrap Nav Style //
-
-
-
-
-    button.btn {
-      font-size: 1.6rem;
-    }
-
-    button.navbar-toggler {
-      height: 4rem;
-      width: 4rem;
-    }
-
-    span.navbar-toggler-icon {
-      height: 2.5rem;
-      width: 2.5rem;
-    }
-
-    .fa-twitter {
-      color: $color-li-principal;
-    }
-
-    .fa-instagram {
-      color: $color-li-principal;
-    }
-
-    .fa-whatsapp {
-      color: $color-li-principal;
-    }
-
-    .fa-facebook {
-      color: $color-li-principal;
-    }
-
-    .fa-twitter:hover {
-      color: $color-hover-inav;
-      transition: .5s;
-    }
-
-    .fa-instagram:hover {
-      color: $color-hover-inav;
-      transition: .5s;
-    }
-
-    .fa-whatsapp:hover {
-      color: $color-hover-inav;
-      transition: .5s;
-    }
-
-    .fa-facebook:hover {
-      color: $color-hover-inav;
-      transition: .5s;
-    }
-
-    /*///////////////////////////////////////*/
   }
 
 
@@ -110,18 +50,10 @@ html {
      }
   
        div {
-        display: flex;
-        min-height: inherit;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        background-color: rgba(0, 0, 0, .50);
+        @include flexbox-div;
         
          h1 {
-          font-size: 5vh;
-          font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-          text-shadow: 0 0 4px rgb(196, 157, 32), 0 0 5px rgb(255, 230, 0), 0 0 3px rgb(255, 217, 0), 0 0 7px rgb(255, 102, 0);
+          @include santandar-h1;
                     
           @include media-up(lg) {
               font-size: 4vh;
@@ -136,20 +68,17 @@ html {
     }
     
     .flex__container-home {
-      margin-left:auto;
-      margin-right: auto;
-      margin-top: 3rem;
-      margin-bottom: 3rem;
-      display: flex;
-      justify-content: center;
-      align-content: center;
-      align-items: center;
+      @include flex-container;
 
       @include media-up(lg) {
         margin-top: 3rem;
         margin-bottom: 7rem;
         gap: 2rem;
       }
+
+      @include media-up(lg){
+        flex-direction: column;
+    }
     
       .flex__item-home {
         flex: 0 0 40%;
@@ -173,6 +102,10 @@ html {
     
           p {
             font-size: 1.8rem;
+            @include media-up(lg) {
+              margin-left: 3%;
+              margin-right: 3%;
+            }
           }
       }
       
@@ -184,7 +117,7 @@ html {
         }
       }
     
-      img.img__article-home {
+      img {
         width: 40vh;
         height: 40vh;
         border-radius: $img-radius;
@@ -192,15 +125,14 @@ html {
         
 
         @include media-up(xl) {
-          width: 35vh;
-          height: 35vh;
-          margin-bottom: 4rem;
-        }
-
-        @include media-up(lg) {
           width: 43vh;
           height: 43vh;
-        }  
+          margin-bottom: 4rem;
+        }
+        @include media-up(xl) {
+          width: 47vh;
+          height: 47vh;
+        }
       } 
     }
   }
@@ -213,354 +145,3 @@ html {
     text-align: center;
       
   }  
-
-
-
-  
-
-
-
-
-
-
-
-
-/* /////// Galeria Bootstrap ///////// */
-  
-
-.dropdown-item {
-  font-size: 1.6rem;
-}
-
-#galeria .text-center {
-  font-size: 1.6rem;
-}
-
-#galeria .col-lg-4 {
-  padding: 2.5rem;
-}
-
-#galeria img {
-  width: 100%;
-  height: 55rem;
-}
-
-#galeria img:hover {
- border: 5px solid #f7f7f7;
-}
-
-/* //////////////////////////////////////////// */
-
-
-
-
-
-
-
-/*MEDIA QUERY*/
-
-
-@media screen and (max-width: 1400px) {
-
-  /* ////////////   NOSOTROS  ///////////////*/
-
-  .container__about img {
-    width: 22vh;
-    height: 22vh;
-    border-radius: 50%;
-  }
-
-}
-  
-
-@media screen and (max-width: 1200px) {
-
-   /* ////////////   INDEX   ///////////////*/
- 
-   footer {
-    font-size: 1.3rem;
-    text-align: center;
-  }
-  
-   h1 {
-    font-size: 4vh;
-  }
-  
-  .flex__container-home {
-    margin-top: 3rem;
-    margin-bottom: 10rem;
-    gap: 2rem;
-  }
-  
- 
-  
-  h2 {
-    font-size: 3rem;
-    margin-bottom: 5rem;
-  }
-
-  p {
-    margin: 2rem;
-    font-size: 1.6rem;
-  }
-  
-
-  /* ////////////   NOSOTROS  ///////////////*/
-
-  .hero__image-about {
-  min-height: 45vh;
-  }
-
-  .container__about img {
-    width: 21vh;
-    height: 21vh;
-  }
-
-
-  /* ////////////   SERVICIOS   ///////////////*/
-
-  .hero__image-services {
-  min-height: 45vh;
-  }
-
-  .flex__container-service {
-    margin-bottom: 10rem;
-  }
-
-  .flex__item-service h3 {
-    text-align: center;
-  }
-
-  .flex__container-service img {
-    width: 30vh;
-    height: 30vh;
-  }
-
-
-  /* ////////////   RED SOCIAL   ///////////////*/
-
-  .hero__image-red-social {
-    min-height: 40vh;
-  }
-
-}
-
- 
-@media only screen and (max-width: 992px) {
-
-  /* ////////////   INDEX   ///////////////*/
- 
- 
-   
-   .menu img {
-     height: 1.2rem;
-     width: 1.2rem;
-     margin-right: 0.5rem;
-   }
-   
-   
-   .flex__container-home {
-   
-     margin-top: 3rem;
-     margin-bottom: 10rem;
-     flex-direction: column;
-     gap: 2rem;
-   }
-   
-   .flex__order-1 {
-     order: 0;
-   }
-   
-   
-   img.img__article-home {
-   width: 40vh;
-   height: 40vh;
-   }
- 
- 
- /* ////////////   NOSOTROS  ///////////////*/
- 
- 
- .container__about {
-   grid-template-columns: 1fr 1fr;
-   grid-template-rows: 1fr 0.6fr 1fr 0.6fr;
-   text-align: center;
-   grid-template-areas:
-     
-     "section__article-about1 section__article-about1"
-     "article__img-about1 article__img-about2"
-     "section__article-about2 section__article-about2"
-     "article__img-about3 article__img-about4"
-   ;
- }
- .container__about img {
-   width: 23vh;
-   height: 23vh;
- }
- 
- 
- /* ////////////   SERVICIOS   ///////////////*/
- 
- 
- .hero__image-services h1 {
-   font-size: 4vh;
- }
- 
- 
- .flex__container-service {
-   margin-left:auto;
-   margin-right: auto;
-   margin-top: 3rem;
-   margin-bottom: 10rem;
- }
- 
- .flex__item-service h3 {
-   font-size: 2.5rem;
-   text-align: center;
- }
- 
- 
- .flex__container-service img {
-   width: 25vh;
-   height: 25vh;
- }
- 
- 
- /* ////////////   RED SOCIAL   ///////////////*/
- 
- 
- .hero__image-red-social h1 {
-   font-size: 4vh;  
- }
- 
- .container__redsocial{
-   flex-wrap: wrap;
-   align-content: center;
-   height: auto;
-   margin: 2rem 0;
- }
- 
- .card__redsocial{
-   border-radius: 5rem;
-   width: 27rem;
-   height: 35rem;
- }
- 
- .h3__redsocial {
-   font-size: 1.7rem;
- }
- 
- .content__redsocial p{
-   font-size: 1.4rem;
-  }
-
-  /* ////////////   CONTACTO   ///////////////*/
-
-  .container__card {
-    gap:0.5rem;
-  }
-
-} 
- 
-@media only screen and (max-width: 768px) {
-
-
-  /*/////////////   SERVICIOS   /////////////////*/
-
-
-  .flex__container-service {
-    flex-direction: column;
-  }
-
-  .flex__container-service img {
-    width: 35vh;
-    height: 35vh;
-  }
-
-
-
-  /* ////////////// CONTACTO /////////////////////*/
-
-  .container {
-    height: auto;
-    margin-left: 5%;
-    margin-right: 5%;
-    margin-bottom: 3rem;
-  
-  }
-  .contact-wrapper {
-      height: 100rem;
-      display: grid;
-      grid-template-columns: 1fr;
-      grid-template-rows: 1fr 1fr;
-      justify-content: center;
-      align-content: center;
-      align-items: center;
-      grid-template-areas: 
-      "contact-form contact-form"
-      "contact-info contact-info"
-      ;
-  }
-  
-  .contact-form {
-    grid-area:contact-form;
-    margin-bottom: 0;
-  }
-  .contact-info {
-    grid-area:contact-info;
-    margin-top: 0;
-    position:absolute;
-    top:0px;
-  }
-
-  .contact-info h4, .contact-info ul, .contact-info p {
-    text-align: center;
-  }
-
-      /*CARD*/
-
- .container__card {
-  position: relative;
-  top: -150px;
-  flex-direction: column;
-  align-content: center;
-  justify-content: center;
-  align-items: center;
- }
-
-
-
-}
-
-
-
- @media only screen and (max-width: 576px) {
- 
-  
-  
- 
-    /* ////////////   NOSOTROS   ///////////////*/
- 
- 
-   .container__about img {
-     width: 20vh;
-     height: 20vh;
-   }
- 
- 
-    /* ////////////   SERVICIOS   ///////////////*/
- 
- 
-   .flex__container-service img {
-     width: 30vh;
-     height: 30vh;
-   }
- 
- 
-    /* ////////////   RED SOCIAL  ///////////////*/
- 
- 
-   .container__redsocial {
-       flex-direction: column; 
-   }
-  }
