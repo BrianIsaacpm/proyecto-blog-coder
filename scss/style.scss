@@ -1,0 +1,147 @@
+@import "utilities/variables";
+@import "utilites/maps";
+@import "utilites/mixin";
+@import "utilites/extend";
+@import "utilites/nav-bootstrap";
+@import "utilities/nosotros";
+@import "utilities/servicios";
+@import "utilities/redsocial";
+@import "utilities/contacto";
+@import "utilities/galeria";
+
+
+
+/*  INDEX   NESTING  */
+
+
+html {
+    @include html-reset;
+    *, *::after {
+       @include size-reset;
+  }
+}     
+
+
+  header  {
+    font-size: 1.6rem;
+    position: sticky;
+    z-index: 110;
+    top: 0;
+  }
+
+
+  main {
+    flex-grow: 1;
+    
+    .hero__image {
+      min-height: 100vh;
+      background-image: url(../img/hero-image.jpg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-attachment: fixed;
+      color: $color-li-principal;
+
+      @include media-up(xl) {
+        min-height: 70vh;
+     }
+
+      @include media-up(md) {
+        min-height: 60vh;
+     }
+  
+       div {
+        @include flexbox-div;
+        
+         h1 {
+          @include santandar-h1;
+                    
+          @include media-up(lg) {
+              font-size: 4vh;
+          }
+        
+        }
+        img {
+          width: 20rem;
+          height: 20rem;
+        }  
+      }
+    }
+    
+    .flex__container-home {
+      @include flex-container;
+
+      @include media-up(lg) {
+        margin-top: 3rem;
+        margin-bottom: 7rem;
+        gap: 2rem;
+      }
+
+      @include media-up(lg){
+        flex-direction: column;
+    }
+    
+      .flex__item-home {
+        flex: 0 0 40%;
+
+        @include media-up(lg){
+          margin-top: 5rem;
+          margin-bottom: 2rem;
+        }
+    
+        h2 {
+          font-size: xx-large;
+          margin-bottom: 4rem;
+          font-weight: bold;
+
+          @include media-up(xl){
+            text-align: center;
+            font-size: 3rem;
+            margin-bottom: 4rem;
+          } 
+        }
+    
+          p {
+            font-size: 1.8rem;
+            @include media-up(lg) {
+              margin-left: 3%;
+              margin-right: 3%;
+            }
+          }
+      }
+      
+      .flex__order-1 {
+        order: 1;
+
+        @include media-up(xl) {
+          order: 0;
+        }
+      }
+    
+      img {
+        width: 40vh;
+        height: 40vh;
+        border-radius: $img-radius;
+        margin: 0 5rem;
+        
+
+        @include media-up(xl) {
+          width: 43vh;
+          height: 43vh;
+          margin-bottom: 4rem;
+        }
+        @include media-up(xl) {
+          width: 47vh;
+          height: 47vh;
+        }
+      } 
+    }
+  }
+
+  footer {
+    font-size: 1.4rem;
+    padding: 1rem;
+    background-color: $color-footer;
+    color: $color-secundario;
+    text-align: center;
+      
+  }  

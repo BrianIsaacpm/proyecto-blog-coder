@@ -1,0 +1,137 @@
+
+main {
+   
+    
+  .hero__image-about {
+    min-height: 60vh;
+    background-image: url(../img/hero-image4.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    color: $color-li-principal;
+
+    @include media-up(xl) {
+        min-height: 70vh;
+    }
+
+    @include media-up(md) {
+        min-height: 60vh;
+    }
+  
+     div {
+       @include flexbox-div;
+        
+       h1 {
+        @include santandar-h1;
+                   
+         @include media-up(lg) {
+              font-size: 4vh;
+          }
+        }
+      }
+  }
+  
+  .container__about {
+    margin-left: 5%;
+    margin-right: 5%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 0.8fr 1fr 0.8fr;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    text-align: center;
+    
+    grid-template-areas:
+        
+      "section__article-about1 section__article-about1 section__article-about1 section__article-about1"
+      "article__img-about1 article__img-about2 article__img-about3 article__img-about4"
+      "section__article-about2 section__article-about2 section__article-about2 section__article-about2"
+    ;
+
+    @include media-up(lg) {
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 0.6fr 1fr 0.6fr;
+      text-align: center;
+      grid-template-areas:
+        
+        "section__article-about1 section__article-about1"
+        "article__img-about1 article__img-about2"
+        "section__article-about2 section__article-about2"
+        "article__img-about3 article__img-about4"
+      ;
+    }
+
+    .article__img-about1 {
+      grid-area: article__img-about1;
+      text-align: center;
+    }
+    
+    .article__img-about2 {
+      grid-area: article__img-about2;
+    }
+    
+    .article__img-about3 {
+      grid-area: article__img-about3;
+    }
+    
+    .article__img-about4 {
+      grid-area: article__img-about4;
+    }
+    
+    .section__article-about1 {
+    grid-area:section__article-about1;
+    }
+    
+    .section__article-about2 {
+      grid-area:section__article-about2;
+    }
+    img {
+      width: 27vh;
+      height: 27vh;
+      border-radius: 50%;
+
+      @include media-up(xl) {
+        width: 24vh;
+        height: 24vh;
+      }
+      @include media-up(lg) {
+        width: 30vh;
+        height: 30vh;
+      }
+    
+    
+      
+    }
+    p {
+      margin-top: 2rem;
+      margin-bottom: 2rem;
+      font-size: 2rem; 
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+  
+  
+
+
+  
+  
+  
+ 
+  
+  
+ 

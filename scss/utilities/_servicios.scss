@@ -1,0 +1,106 @@
+ /* CSS Servicios */
+  
+ 
+
+ main {
+    .hero__image-services {
+        min-height: 60vh;
+        background-image: url(../img/hero-image1.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+        color: #fff;    
+        @include media-up(xl) {
+            min-height: 70vh;
+        }
+    
+        @include media-up(md) {
+            min-height: 60vh;
+        }    
+        div {
+          @include flexbox-div;
+        
+          h1 {
+            @include santandar-h1;
+                        
+            @include media-up(lg) {
+                font-size: 4vh;
+            } 
+          }
+        }
+    }
+
+    .flex__container-service {
+        @include flex-container;
+        
+        @include media-up(lg){
+            margin-bottom: 10rem;
+        }
+        
+        @include media-up(lg){
+            margin-left:auto;
+            margin-right: auto;
+            margin-top: 3rem;
+        }
+        @include media-up(md){
+            flex-direction: column;
+        }
+
+
+    
+
+        .flex__item-service {
+            font-size: xx-large;
+            margin-bottom: 5rem;
+            flex: 0 0 40%;
+            margin: 1rem;
+
+            h2 {
+              font-size: 3rem;
+              margin-bottom: 3rem;
+              font-weight: bold;
+
+              @include media-up(xl){
+                text-align: center;
+                font-size: 3rem;
+                margin-bottom: 4rem;
+              }
+              @include media-up(lg){
+                font-size: 2.5rem; 
+              }  
+            }
+
+            p {
+                font-size: 2rem;
+            }
+        }
+
+        .flex__order-1 {
+            order: 1;
+    
+            @include media-up(xl) {
+              order: 0;
+            }
+          }
+        img {
+          width: 37vh;
+          height: 37vh;
+          border-radius: $img-radius;
+          margin: 0 5rem;
+
+          @include media-up(xl) {
+            width: 35vh;
+            height: 35vh;
+            margin-bottom: 4rem;
+          }
+  
+          @include media-up(lg) {
+            width: 40vh;
+            height: 40vh;
+          }  
+        }  
+    }      
+}
+
+
+  

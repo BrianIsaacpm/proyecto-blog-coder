@@ -1,0 +1,40 @@
+
+@mixin html-reset {
+    font-size:  62.5%;
+    box-sizing: border-box;
+}
+
+@mixin size-reset {
+    font-family: sans-serif;
+    box-sizing: border-box;
+    margin: $marginpadding-reset;
+    padding: $marginpadding-reset;
+}
+
+
+@mixin standard-h1{
+    font-size: 5vh;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-shadow: 0 0 4px rgb(196, 157, 32), 0 0 5px rgb(255, 230, 0), 0 0 3px rgb(255, 217, 0), 0 0 7px rgb(255, 102, 0);
+  }
+  
+  @mixin flexbox-div{
+    display: flex;
+    min-height: inherit;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: rgba(0, 0, 0, .50);
+  }
+  
+  @mixin flex-container{
+    margin-left:auto;
+    margin-right: auto;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+  }
