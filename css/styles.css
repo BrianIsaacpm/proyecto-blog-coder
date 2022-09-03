@@ -119,6 +119,8 @@ main .container__about {
   main .container__about img {
     width: 27vh;
     height: 27vh;
+    margin-top: 3rem;
+    margin-bottom: 6rem;
     border-radius: 50%; }
     @media screen and (max-width: 1200px) {
       main .container__about img {
@@ -138,6 +140,7 @@ main .container__about {
         height: 21vh; } }
   main .container__about p {
     margin-top: 2rem;
+    margin-bottom: 2rem;
     font-size: 2rem; }
     @media screen and (max-width: 576px) {
       main .container__about p {

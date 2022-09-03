@@ -90,6 +90,8 @@ main {
     img {
       width: 27vh;
       height: 27vh;
+      margin-top: 3rem;
+      margin-bottom: 6rem;
       border-radius: 50%;
 
       @include media-up(xl) {
@@ -116,6 +118,7 @@ main {
     }
     p {
       margin-top: 2rem;
+      margin-bottom: 2rem;
       font-size: 2rem; 
 
       @include media-up(sm) {
