@@ -1,3 +1,62 @@
+main .container .contact-wrapper .contact-form form button, main .container .contact-wrapper .contact-form form textarea, main .container .contact-wrapper .contact-form form input {
+  width: 100%;
+  padding: .7em;
+  border: none;
+  background: none;
+  outline: 0;
+  color: #fff;
+  border-bottom: 1px solid #f100e5; }
+
+button.btn {
+  font-size: 1.6rem; }
+
+button.navbar-toggler {
+  height: 4rem;
+  width: 4rem; }
+
+span.navbar-toggler-icon {
+  height: 2.5rem;
+  width: 2.5rem; }
+
+small > a {
+  text-decoration: none;
+  color: #fff; }
+
+small > a:hover {
+  color: #ffc107;
+  transition: .5s; }
+
+.dropdown-item {
+  font-size: 1.4rem; }
+
+.fa-twitter {
+  color: #fff; }
+
+.fa-instagram {
+  color: #fff; }
+
+.fa-whatsapp {
+  color: #fff; }
+
+.fa-facebook {
+  color: #fff; }
+
+.fa-twitter:hover {
+  color: #ffc107;
+  transition: .5s; }
+
+.fa-instagram:hover {
+  color: #ffc107;
+  transition: .5s; }
+
+.fa-whatsapp:hover {
+  color: #ffc107;
+  transition: .5s; }
+
+.fa-facebook:hover {
+  color: #ffc107;
+  transition: .5s; }
+
 main .hero__image-about {
   min-height: 60vh;
   background-image: url(../img/hero-image4.jpg);
@@ -69,10 +128,22 @@ main .container__about {
       main .container__about img {
         width: 30vh;
         height: 30vh; } }
+    @media screen and (max-width: 576px) {
+      main .container__about img {
+        width: 25vh;
+        height: 25vh; } }
+    @media screen and (max-width: 489px) {
+      main .container__about img {
+        width: 21vh;
+        height: 21vh; } }
   main .container__about p {
     margin-top: 2rem;
-    margin-bottom: 2rem;
     font-size: 2rem; }
+    @media screen and (max-width: 576px) {
+      main .container__about p {
+        font-size: 1.8rem;
+        margin-left: 3%;
+        margin-right: 3%; } }
 
 /* CSS Servicios */
 main .hero__image-services {
@@ -173,14 +244,13 @@ main .hero__image-red-social {
   background-attachment: fixed;
   color: #fff; }
   main .hero__image-red-social div {
-    min-height: inherit;
-    max-width: inherit;
     display: flex;
+    min-height: inherit;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
-    background-color: rgba(0, 0, 0, 0.65); }
+    background-color: rgba(0, 0, 0, 0.5); }
     main .hero__image-red-social div h1 {
       font-size: 5vh;
       font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
@@ -300,13 +370,13 @@ main {
     background-attachment: fixed;
     color: #fff; }
     main .hero__image-contact div {
-      min-height: inherit;
       display: flex;
+      min-height: inherit;
       flex-direction: column;
       justify-content: center;
       align-items: center;
       text-align: center;
-      background-color: rgba(0, 0, 0, 0.65); }
+      background-color: rgba(0, 0, 0, 0.5); }
       main .hero__image-contact div h1 {
         font-size: 5vh;
         font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
@@ -376,14 +446,6 @@ main {
               transition: background-color 1s ease-out;
               outline: 0;
               cursor: pointer; }
-          main .container .contact-wrapper .contact-form form button, main .container .contact-wrapper .contact-form form textarea, main .container .contact-wrapper .contact-form form input {
-            width: 100%;
-            padding: .7em;
-            border: none;
-            background: none;
-            outline: 0;
-            color: #fff;
-            border-bottom: 1px solid #f100e5; }
       main .container .contact-wrapper .contact-info {
         font-size: 1.4rem;
         background: #000;
@@ -534,36 +596,7 @@ header {
   font-size: 1.6rem;
   position: sticky;
   z-index: 110;
-  top: 0;
-  /*///////////////////////////////////////*/ }
-  header button.btn {
-    font-size: 1.6rem; }
-  header button.navbar-toggler {
-    height: 4rem;
-    width: 4rem; }
-  header span.navbar-toggler-icon {
-    height: 2.5rem;
-    width: 2.5rem; }
-  header .fa-twitter {
-    color: #fff; }
-  header .fa-instagram {
-    color: #fff; }
-  header .fa-whatsapp {
-    color: #fff; }
-  header .fa-facebook {
-    color: #fff; }
-  header .fa-twitter:hover {
-    color: #ffc107;
-    transition: .5s; }
-  header .fa-instagram:hover {
-    color: #ffc107;
-    transition: .5s; }
-  header .fa-whatsapp:hover {
-    color: #ffc107;
-    transition: .5s; }
-  header .fa-facebook:hover {
-    color: #ffc107;
-    transition: .5s; }
+  top: 0; }
 
 main {
   flex-grow: 1; }
@@ -651,10 +684,14 @@ main {
           width: 43vh;
           height: 43vh;
           margin-bottom: 4rem; } }
-      @media screen and (max-width: 1200px) {
+      @media screen and (max-width: 992px) {
         main .flex__container-home img {
           width: 47vh;
           height: 47vh; } }
+  @media screen and (max-width: 992px) and (max-width: 489px) {
+    main .flex__container-home img {
+      width: 43vh;
+      height: 43vh; } }
 
 footer {
   font-size: 1.4rem;

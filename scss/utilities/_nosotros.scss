@@ -22,7 +22,7 @@ main {
        @include flexbox-div;
         
        h1 {
-        @include santandar-h1;
+        @include standard-h1;
                    
          @include media-up(lg) {
               font-size: 4vh;
@@ -86,6 +86,7 @@ main {
     .section__article-about2 {
       grid-area:section__article-about2;
     }
+
     img {
       width: 27vh;
       height: 27vh;
@@ -99,15 +100,32 @@ main {
         width: 30vh;
         height: 30vh;
       }
+
+      @include media-up(sm) {
+        width: 25vh;
+        height: 25vh;
+      }
+
+      @include media-up(xsm) {
+        width: 21vh;
+        height: 21vh;
+      }
     
     
       
     }
     p {
       margin-top: 2rem;
-      margin-bottom: 2rem;
       font-size: 2rem; 
+
+      @include media-up(sm) {
+        font-size: 1.8rem;
+        margin-left: 3%;
+        margin-right: 3%;
+      }
     }
+
+   
   }
 }
 

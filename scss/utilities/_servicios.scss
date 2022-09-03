@@ -21,7 +21,7 @@
           @include flexbox-div;
         
           h1 {
-            @include santandar-h1;
+            @include standard-h1;
                         
             @include media-up(lg) {
                 font-size: 4vh;

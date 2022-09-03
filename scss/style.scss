@@ -1,8 +1,8 @@
 @import "utilities/variables";
-@import "utilites/maps";
-@import "utilites/mixin";
-@import "utilites/extend";
-@import "utilites/nav-bootstrap";
+@import "utilities/maps";
+@import "utilities/mixin";
+@import "utilities/extend";
+@import "utilities/nav-bootstrap";
 @import "utilities/nosotros";
 @import "utilities/servicios";
 @import "utilities/redsocial";
@@ -53,7 +53,7 @@ html {
         @include flexbox-div;
         
          h1 {
-          @include santandar-h1;
+          @include standard-h1;
                     
           @include media-up(lg) {
               font-size: 4vh;
@@ -129,9 +129,14 @@ html {
           height: 43vh;
           margin-bottom: 4rem;
         }
-        @include media-up(xl) {
+        @include media-up(lg) {
           width: 47vh;
           height: 47vh;
+
+          @include media-up(xsm) {
+            width: 43vh;
+            height: 43vh;
+          }
         }
       } 
     }

@@ -16,6 +16,21 @@ button.btn {
     width: 2.5rem;
   }
 
+  small > a {
+    text-decoration: none;
+    color: $color-li-principal;
+  }
+
+  small > a:hover {
+    color: $color-hover-inav;
+    transition: .5s;
+  }
+
+
+  .dropdown-item {
+    font-size: 1.4rem;
+  }
+
   .fa-twitter {
     color: $color-li-principal;
   }
@@ -51,3 +66,4 @@ button.btn {
     color: $color-hover-inav;
     transition: .5s;
   }
+

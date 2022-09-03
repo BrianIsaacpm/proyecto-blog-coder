@@ -15,7 +15,7 @@ main {
         @include flexbox-div;
       
         h1 {
-          @include santandar-h1;   
+          @include standard-h1;   
           @include media-up(xl) {
               font-size: 4vh;  
           }     
