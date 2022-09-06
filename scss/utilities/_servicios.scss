@@ -72,6 +72,12 @@
 
             p {
                 font-size: 2rem;
+                  @include media-up(lg) {
+                   text-align: center; 
+                   margin-bottom: 2rem;
+                  
+                }
+              
             }
         }
 
@@ -97,6 +103,8 @@
           @include media-up(lg) {
             width: 40vh;
             height: 40vh;
+            margin-top: 2rem;
+
           }  
         }  
     }      
