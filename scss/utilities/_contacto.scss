@@ -53,7 +53,7 @@ main {
             padding: 2em;
 
             @include media-up(md) {
-                height: 100rem;
+               height: 100rem;
                display: grid;
                grid-template-columns: 1fr;
                grid-template-rows: 1fr 1fr;
@@ -94,20 +94,37 @@ main {
                       textarea {
                         height: 25rem;
                       } 
-                      button {
+                     button.btn1 {
                         background: #910b49;
                         border: 0;
                         text-transform: uppercase;
                         padding: 1em;
+                        margin-bottom: 1rem;
                       }
-                       button:hover,
-                       button:focus {
+                       button.btn1:hover,
+                       button.btn1:focus {
                          background: #430249;
                          color: #fff;
                          transition: background-color 1s ease-out;
                          outline: 0;
                          cursor: pointer;
                        }
+                       button.btn2 {
+                        background: #585858;
+                        border: 0;
+                        text-transform: uppercase;
+                        padding: 1em;
+                        margin-bottom: 1rem;
+                      }
+                       button.btn2:hover,
+                       button.btn2:focus {
+                         background: #757274;
+                         color: #fff;
+                         transition: background-color 1s ease-out;
+                         outline: 0;
+                         cursor: pointer;
+                       }
+                       
                     }
 
                     button {
