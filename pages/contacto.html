@@ -4,8 +4,14 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Sigue a nuestro equipo en tus redes sociales y no te pierdas las promociones que tenemos para ti, te dejamos elegir a la estilista que tu desees, y recuerda que ante cualquier duda envianos un correo electronico">
-    <meta name="keywords" content="CONTACTO, INSTAGRAM, FACEBOOK, WHATSAAP, TWITTER, BELLEZA, PELUQUERIA, SALON, BEAUTY, ESTILISMO, PROFESIONAL, STYLE, PROFESIONAL, MODA">
+    <meta
+      name="description"
+      content="Sigue a nuestro equipo en tus redes sociales y no te pierdas las promociones que tenemos para ti, te dejamos elegir a la estilista que tu desees, y recuerda que ante cualquier duda envianos un correo electronico"
+    />
+    <meta
+      name="keywords"
+      content="CONTACTO, INSTAGRAM, FACEBOOK, WHATSAAP, TWITTER, BELLEZA, PELUQUERIA, SALON, BEAUTY, ESTILISMO, PROFESIONAL, STYLE, PROFESIONAL, MODA"
+    />
     <link rel="stylesheet" href="../css/styles.css" />
     <link
       rel="stylesheet"
@@ -30,7 +36,6 @@
     <header>
       <nav class="navbar navbar-expand-md navbar-dark bg-dark">
         <div class="container-fluid">
-
           <a class="navbar-brand" href="#">
             <img
               src="../img/logo2.png"
@@ -110,7 +115,11 @@
                 <a href="https://www.twitter.com" target="_blank"
                   ><i class="fa-brands fa-twitter"></i
                 ></a>
-                <small class="d-md-none ms-2"><a href="https://www.twitter.com" target="_blank">Twitter</a></small>
+                <small class="d-md-none ms-2"
+                  ><a href="https://www.twitter.com" target="_blank"
+                    >Twitter</a
+                  ></small
+                >
               </li>
 
               <li class="nav-item col-6 col-md-auto p-3">
@@ -118,7 +127,11 @@
                 <a href="https://www.instagram.com" target="_blank"
                   ><i class="fa-brands fa-instagram"></i
                 ></a>
-                <small class="d-md-none ms-2"><a href="https://www.instagram.com" target="_blank">Instagram</a></small>
+                <small class="d-md-none ms-2"
+                  ><a href="https://www.instagram.com" target="_blank"
+                    >Instagram</a
+                  ></small
+                >
               </li>
 
               <li class="nav-item col-6 col-md-auto p-3">
@@ -126,14 +139,22 @@
                 <a href="https://www.whatsApp.com" target="_blank"
                   ><i class="fa-brands fa-whatsapp"></i
                 ></a>
-                <small class="d-md-none ms-2"><a href="https://www.whatsApp.com" target="_blank">WhatsApp</a></small>
+                <small class="d-md-none ms-2"
+                  ><a href="https://www.whatsApp.com" target="_blank"
+                    >WhatsApp</a
+                  ></small
+                >
               </li>
 
               <li class="nav-item col-6 col-md-auto p-3">
                 <a href="https://www.facebook.com" target="_blank"
                   ><i class="fa-brands fa-facebook"></i
                 ></a>
-                <small class="d-md-none ms-2"><a href="https://www.facebook.com" target="_blank">Facebook</a></small>
+                <small class="d-md-none ms-2"
+                  ><a href="https://www.facebook.com" target="_blank"
+                    >Facebook</a
+                  ></small
+                >
               </li>
             </ul>
 
@@ -141,7 +162,6 @@
               <button
                 class="btn btn-outline-warning d-none d-md-inline-block m-4"
                 type="submit"
-                
               >
                 Mas Información
               </button>
@@ -161,7 +181,7 @@
           <h2 class="logo">DEJA TUS <span>COMENTARIOS</span></h2>
           <div class="contact-wrapper animated bounceInUp">
             <div class="contact-form">
-              <form id="formulario" action="">
+              <form id="formulario" method="post" action="">
                 <p>
                   <label>Nombre Completo</label>
                   <input id="nombre" type="text" name="nombre" />
@@ -183,20 +203,10 @@
                   <textarea id="mensaje" name="mensaje" rows="3"></textarea>
                 </p>
                 <p class="block">
-                  <button 
-                  type="submit"
-                  class="opacity-50 btn1"
-                  disabled
-                  >Enviar
-                </button>
-                <br>
-                <button 
-                        class="btn2"
-                        type="reset"
-                    >
-                        
-                        Reset
-                    </button>
+                  <button type="submit" class="opacity-50 btn1" disable >Enviar</button>
+
+                  <br />
+                  <button class="btn2" type="reset">Reset</button>
                 </p>
               </form>
               <div id="spinner" class="d-none justify-content-center mb-4">
@@ -208,7 +218,8 @@
                   <div class="sk-chase-dot"></div>
                   <div class="sk-chase-dot"></div>
                 </div>
-            </div>
+              </div>
+              <div id="message"></div>
             </div>
             <div class="contact-info">
               <h2>Más Información</h2>
@@ -230,7 +241,7 @@
           </div>
         </div>
       </div>
-      
+
       <div class="container__card">
         <div class="card">
           <div class="content">
@@ -294,8 +305,6 @@
       </div>
     </main>
     <footer><b>Todos los derechos reservados &copy;</b></footer>
-
-
 
     <script src="/js/app.js"></script>
     <script

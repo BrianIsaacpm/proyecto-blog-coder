@@ -14,10 +14,11 @@ document.addEventListener('DOMContentLoaded', function() {
     const inputEmail = document.querySelector('#email');
     const inputAsunto = document.querySelector('#asunto');
     const inputMensaje = document.querySelector('#mensaje');
-    const formulario = document.querySelector('#formulario');
+    const formulario = document.getElementById('formulario');
     const btnSubmit = document.querySelector('#formulario button[type="submit"]');
     const btnReset = document.querySelector('#formulario button[type="reset"]');
     const spinner = document.querySelector('#spinner');
+    const msg = document.querySelector('#message');
     
 
     // Asignacion de Eventos
@@ -37,9 +38,10 @@ document.addEventListener('DOMContentLoaded', function() {
         resetFormulario();
     })
 
-///////////////////////// ARREGLAR ///////////////////////////////////////////
+ ///////////////////////// ARREGLAR ///////////////////////////////////////////
 
     function enviarEmail(e){
+        debugger
         e.preventDefault();
         console.log('enviando...')          // aca tengo un error que no me muestra al momento de realizar el evento..
 
@@ -55,10 +57,10 @@ document.addEventListener('DOMContentLoaded', function() {
 
             // Alerta mensaje enviado
             const alertaExito = document.createElement('P');
-            alertaExito.classList.add('bg-success', 'text-white', 'p-2', 'text-center', 'rounded-lg', 'mt-10', 'font-weight-bold', 'text-sm', 'text-uppercase');
+            alertaExito.classList.add('bg-success', 'text-white', 'p-2', 'text-center', 'rounded', 'mt-10', 'font-weight-bold', 'text-sm', 'text-uppercase');
             alertaExito.textContent = 'Mensaje enviado correctamente';
 
-            formulario.appendChild(alertaExito);
+            msg.appendChild(alertaExito);
 
             setTimeout(() => {
                 alertaExito.remove();
@@ -66,7 +68,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }, 3000);
     }
 
-///////////////////////////////////////////////
+ ///////////////////////////////////////////////
 
 
     function validar(e) {
@@ -127,11 +129,11 @@ document.addEventListener('DOMContentLoaded', function() {
 
         if (Object.values(email).includes('')) {
             btnSubmit.classList.add('opacity-50');
-            btnSubmit.disable = true;
+            btnSubmit.disabled = true;
 
         } else {
             btnSubmit.classList.remove('opacity-50');
-            btnSubmit.disable = false;
+            btnSubmit.disabled = false;
         }
     }
 
