@@ -38,12 +38,12 @@ document.addEventListener('DOMContentLoaded', function() {
         resetFormulario();
     })
 
- ///////////////////////// ARREGLAR ///////////////////////////////////////////
+ 
 
     function enviarEmail(e){
         debugger
         e.preventDefault();
-        console.log('enviando...')          // aca tengo un error que no me muestra al momento de realizar el evento..
+        console.log('enviando...')          
 
         spinner.classList.add('d-flex');
         spinner.classList.remove('d-none');
@@ -58,7 +58,7 @@ document.addEventListener('DOMContentLoaded', function() {
             // Alerta mensaje enviado
             const alertaExito = document.createElement('P');
             alertaExito.classList.add('bg-success', 'text-white', 'p-2', 'text-center', 'rounded', 'mt-10', 'font-weight-bold', 'text-sm', 'text-uppercase');
-            alertaExito.textContent = 'Mensaje enviado correctamente';
+            alertaExito.textContent = 'El mensaje fue enviado correctamente';
 
             msg.appendChild(alertaExito);
 
@@ -68,7 +68,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }, 3000);
     }
 
- ///////////////////////////////////////////////
+
 
 
     function validar(e) {
