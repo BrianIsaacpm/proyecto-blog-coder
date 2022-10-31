@@ -41,9 +41,9 @@ document.addEventListener('DOMContentLoaded', function() {
  
 
     function enviarEmail(e){
-        debugger
-        e.preventDefault();
-        console.log('enviando...')          
+        console.log(e);
+       
+        e.preventDefault();         
 
         spinner.classList.add('d-flex');
         spinner.classList.remove('d-none');
@@ -51,6 +51,8 @@ document.addEventListener('DOMContentLoaded', function() {
         setTimeout(() => {
             spinner.classList.remove('d-flex');
             spinner.classList.add('d-none');
+
+            storeData();
 
             // Reiniciar el objeto
             resetFormulario();
@@ -151,5 +153,27 @@ document.addEventListener('DOMContentLoaded', function() {
         comprobarEmail();
     }
 
+    // Agregando localstorge
+    let counter = 0;
+    function storeData(){ 
+    
+    //stores items in the localStorage    
+    const nombre = document.querySelector('#nombre').value.toLowerCase();
+    const numero = document.querySelector('#numero').value;
+    const email = document.querySelector('#email').value.toLowerCase();
+    const asunto = document.querySelector('#asunto').value.toLowerCase();
+    const mensaje = document.querySelector('#mensaje').value.toLowerCase();
+
+
+    const data = {
+        nombre,
+        numero,
+        email,
+        asunto,
+        mensaje
+    } 
+
+    localStorage.setItem(`info_user${counter++}`,JSON.stringify(data))};       
+    
 });
 
