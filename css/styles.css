@@ -96,13 +96,18 @@ main .container__about {
   align-content: center;
   align-items: center;
   text-align: center;
-  grid-template-areas: "section__article-about1 section__article-about1 section__article-about1 section__article-about1" "article__img-about1 article__img-about2 article__img-about3 article__img-about4" "section__article-about2 section__article-about2 section__article-about2 section__article-about2"; }
+  grid-template-areas: "section__article-about1 section__article-about1 section__article-about1 section__article-about1"
+ "article__img-about1 article__img-about2 article__img-about3 article__img-about4"
+ "section__article-about2 section__article-about2 section__article-about2 section__article-about2"; }
   @media screen and (max-width: 992px) {
     main .container__about {
       grid-template-columns: 1fr 1fr;
       grid-template-rows: 1fr 0.6fr 1fr 0.6fr;
       text-align: center;
-      grid-template-areas: "section__article-about1 section__article-about1" "article__img-about1 article__img-about2" "section__article-about2 section__article-about2" "article__img-about3 article__img-about4"; } }
+      grid-template-areas: "section__article-about1 section__article-about1"
+ "article__img-about1 article__img-about2"
+ "section__article-about2 section__article-about2"
+ "article__img-about3 article__img-about4"; } }
   main .container__about .article__img-about1 {
     grid-area: article__img-about1;
     text-align: center; }
@@ -421,7 +426,8 @@ main {
           justify-content: center;
           align-content: center;
           align-items: center;
-          grid-template-areas: "contact-form contact-form" "contact-info contact-info"; } }
+          grid-template-areas: "contact-form contact-form"
+ "contact-info contact-info"; } }
       main .container .contact-wrapper .contact-form {
         background: #222222;
         color: #fff; }
@@ -676,6 +682,38 @@ main #galeria img:hover {
     transform: scale(0.4); }
   100%, 0% {
     transform: scale(1); } }
+
+.titulo {
+  font-weight: bold;
+  font-size: 3rem;
+  text-transform: uppercase;
+  color: white; }
+
+.container {
+  font-size: 1.4rem;
+  background-color: white; }
+  .container #nueva-cita {
+    font-size: 1.4rem; }
+    .container #nueva-cita legend {
+      font-size: 2rem; }
+    .container #nueva-cita input {
+      font-size: 1.2rem; }
+  .container .lista-citas .cita {
+    border-bottom: 1px solid #e1e1e1;
+    padding: 2rem;
+    padding-bottom: 3rem; }
+  .container .lista-citas .cita:last-of-type {
+    border-bottom: 0; }
+  .container .lista-citas .cita p {
+    margin: 0; }
+  .container .lista-citas .cita button {
+    margin-top: 1rem !important; }
+  .container .lista-citas .cita span {
+    font-weight: bold; }
+  .container textarea {
+    height: 200px !important; }
+  .container svg {
+    width: 21px; }
 
 /*  INDEX   NESTING  */
 html {
