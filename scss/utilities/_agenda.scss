@@ -1,4 +1,12 @@
-.titulo {
+.body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  background: radial-gradient(circle, rgba(36,22,0,1) 0%, rgba(106,81,46,1) 55%, rgba(255,184,0,1) 100%);
+  min-height: 100%;
+  padding-bottom: 5rem;
+
+  .titulo {
     font-weight: bold;
     font-size: 3rem;
     text-transform: uppercase;
@@ -45,4 +53,7 @@
       width: 21px;
     }
   }
+
+}
+
 
