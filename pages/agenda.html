@@ -7,6 +7,13 @@
     <title>Administrador de Clientes</title>
     <link rel="stylesheet" href="../css/styles.css">
     <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
@@ -71,6 +78,7 @@
                   >
                     Contacto
                   </a>
+  
                   <ul
                     class="dropdown-menu bg-secondary"
                     aria-labelledby="navbarDropdown"
@@ -138,6 +146,14 @@
                   >
                 </li>
               </ul>
+              <form class="d-flex">
+                <button
+                  class="btn btn-outline-warning d-none d-md-inline-block m-4"
+                  type="submit"
+                >
+                <a class="dropdown-item fs-3" href="./agenda.html">Agenda tu hora</a>
+                </button>
+              </form>
             </div>
           </div>
         </nav>
@@ -155,7 +171,7 @@
                         </div>
                     </div>
                     <div class="form-group row">
-                        <label class="col-sm-4 col-lg-4 col-form-label">Apellidos:</label>
+                        <label class="col-sm-4 col-lg-4 col-form-label">Apellido:</label>
                         <div class="col-sm-8 col-lg-8">
                             <input type="text" id="apellido" name="apellido" class="form-control"  placeholder="Apellido">
                         </div>
@@ -181,13 +197,13 @@
                     </div>
 
                     <div class="form-group row">
-                        <label class="col-sm-4 col-lg-4 col-form-label">Descripcion Servicio:</label>
-                        <div class="col-sm-8 col-lg-8">
+                        <label class="col-sm-4 col-lg-4 col-form-label">Descripción Servicio:</label>
+                        <div class="col-sm-8 col-lg-8 mb-3">
                             <textarea id="servicio" name="servicio" class="form-control"></textarea>
                         </div>
                     </div>
                     <div class="form-group">
-                            <button type="submit" class="btn btn-success w-100 d-block">Crear Cita</button>
+                            <button type="submit" class="btn btn-success w-100 d-block mb-4">Crear Cita</button>
                     </div>
                 </form>
             </div>
