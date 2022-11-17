@@ -16,3 +16,9 @@
 - Se agrega boton de eliminar y de editar en la cita que se agrega al HTML
 - Se da funcionalidad a los botones
 - Se crea funcionalidad para editar el objeto
+
+//////////////////////////////////////////////////
+
+- Se crean modulos y se ordena el codigo js por archivo
+- Se importan y exportan archivos para optimizar codigo
+
