@@ -1,179 +1,203 @@
+import Data from "../firebase/data.js";
 
-document.addEventListener('DOMContentLoaded', function() {
+class App {
+  constructor() {
+    this.initialCharge();
+  }
 
-    const email = {
-        nombre: '',
-        numero: '',
-        email: '',
-        asunto: '',
-        mensaje: ''
-    }
+  initialCharge() {
+    debugger;
+    const inputNombre = document.querySelector("#nombre");
+    const inputNumero = document.querySelector("#numero");
+    const inputEmail = document.querySelector("#email");
+    const inputAsunto = document.querySelector("#asunto");
+    const inputMensaje = document.querySelector("#mensaje");
+    const formulario = document.getElementById("formulario");
 
-    const inputNombre = document.querySelector('#nombre');
-    const inputNumero = document.querySelector('#numero');
-    const inputEmail = document.querySelector('#email');
-    const inputAsunto = document.querySelector('#asunto');
-    const inputMensaje = document.querySelector('#mensaje');
-    const formulario = document.getElementById('formulario');
-    const btnSubmit = document.querySelector('#formulario button[type="submit"]');
     const btnReset = document.querySelector('#formulario button[type="reset"]');
-    const spinner = document.querySelector('#spinner');
-    const msg = document.querySelector('#message');
-    
 
     // Asignacion de Eventos
 
-    inputNombre.addEventListener('blur', validar);
-    inputNumero.addEventListener('blur', validar);
-    inputEmail.addEventListener('blur', validar);
-    inputAsunto.addEventListener('blur', validar);
-    inputMensaje.addEventListener('blur', validar);
+    inputNombre.addEventListener("blur", this.validar);
+    inputNumero.addEventListener("blur", this.validar);
+    inputEmail.addEventListener("blur", this.validar);
+    inputAsunto.addEventListener("blur", this.validar);
+    inputMensaje.addEventListener("blur", this.validar);
 
-    formulario.addEventListener('submit', enviarEmail);
+    formulario.addEventListener("submit", this.enviarEmail());
 
-    btnReset.addEventListener('click', function(e) {
-        e.preventDefault();
+    btnReset.addEventListener("click", function (e) {
+      e.preventDefault();
+      // Reiniciar el objeto
+      this.resetFormulario();
+    });
+  }
 
-        // Reiniciar el objeto
-        resetFormulario();
-    })
+  validarEmail(email) {
+    const regex = /^\w+([.-_+]?\w+)*@\w+([.-]?\w+)*(\.\w{2,10})+$/;
+    const resultado = regex.test(email);
+    return resultado;
+  }
 
- 
+  enviarEmail(e) {
+    e.preventDefault();
+    debugger;
 
-    function enviarEmail(e){
-        console.log(e);
-       
-        e.preventDefault();         
+    const formData = new FormData(e.target);
+    const formProps = Object.fromEntries(formData);
+    console.log("Propiedades del formulario: ", formProps);
 
-        spinner.classList.add('d-flex');
-        spinner.classList.remove('d-none');
+    //Captura los componentes
+    const spinner = document.querySelector("#spinner");
+    const msg = document.querySelector("#message");
+    const alertaExito = document.createElement("P");
 
-        setTimeout(() => {
-            spinner.classList.remove('d-flex');
-            spinner.classList.add('d-none');
+    spinner.classList.add("d-flex");
+    spinner.classList.remove("d-none");
 
-            storeData();
+    setTimeout(() => {
+      spinner.classList.remove("d-flex");
+      spinner.classList.add("d-none");
 
-            // Reiniciar el objeto
-            resetFormulario();
+      //aqui envia la data a la bd
+      this.storeData();
 
-            // Alerta mensaje enviado
-            const alertaExito = document.createElement('P');
-            alertaExito.classList.add('bg-success', 'text-white', 'p-2', 'text-center', 'rounded', 'mt-10', 'font-weight-bold', 'text-sm', 'text-uppercase');
-            alertaExito.textContent = 'El mensaje fue enviado correctamente';
+      // Reiniciar el objeto
+      this.resetFormulario();
 
-            msg.appendChild(alertaExito);
+      // Alerta mensaje enviado
 
-            setTimeout(() => {
-                alertaExito.remove();
-            }, 3000);
-        }, 3000);
+      alertaExito.classList.add(
+        "bg-success",
+        "text-white",
+        "p-2",
+        "text-center",
+        "rounded",
+        "mt-10",
+        "font-weight-bold",
+        "text-sm",
+        "text-uppercase"
+      );
+      alertaExito.textContent = "El mensaje fue enviado correctamente";
+
+      msg.appendChild(alertaExito);
+
+      setTimeout(() => {
+        alertaExito.remove();
+      }, 3000);
+    }, 3000);
+  }
+
+  validar(event) {
+    // const email = {
+    //   nombre: "",
+    //   numero: "",
+    //   email: "",
+    //   asunto: "",
+    //   mensaje: "",
+    // };
+
+    if (event.target.value.trim() === "") {
+      this.mostrarAlerta(
+        `El campo de ${event.target.id} es obligatorio`,
+        event.target.parentElement
+      );
+      // email[event.target.name] = "";
+      this.comprobarEmail();
+      return;
     }
 
-
-
-
-    function validar(e) {
-
-        if (e.target.value.trim() === '') {
-            mostrarAlerta(`El campo de ${e.target.id} es obligatorio`, e.target.parentElement);
-            email[e.target.name] = '';
-            comprobarEmail();
-            return;
-        } 
-
-        if (e.target.id === 'email' && !validarEmail(e.target.value)) {
-        mostrarAlerta('El email no es válido', e.target.parentElement);
-        email[e.target.name] = '';
-        comprobarEmail();
-        return;
-
-        }
-
-        limpiarAlerta(e.target.parentElement);
-
-        // Asignacion de los valores
-        email[e.target.name] = e.target.value.trim().toLowerCase();
-        
-        // Comprobar elobjeto email
-        comprobarEmail();
-
+    if (event.target.id === "email" && !this.validarEmail(event.target.value)) {
+      this.mostrarAlerta("El email no es válido", event.target.parentElement);
+      // email[event.target.name] = "";
+      this.comprobarEmail();
+      return;
     }
 
-    function mostrarAlerta (mensaje, referencia) {
+    this.limpiarAlerta(event.target.parentElement);
 
-       limpiarAlerta(referencia);
+    // Asignacion de los valores
+    email[event.target.name] = event.target.value.trim().toLowerCase();
 
-        // Genera alerta en HTML
-        const error = document.createElement('P');
-        error.textContent = mensaje;
-        error.classList.add ('bg-danger', 'text-center', 'text-white', 'p-2', 'mt-2')
-        
-       // Agregando el error al formulario 
-       referencia.appendChild(error);
+    // Comprobar el objeto email
+    this.comprobarEmail();
+  }
+
+  mostrarAlerta(mensaje, referencia) {
+    this.limpiarAlerta(referencia);
+
+    // Genera alerta en HTML
+    const error = document.createElement("P");
+    error.textContent = mensaje;
+    error.classList.add(
+      "bg-danger",
+      "text-center",
+      "text-white",
+      "p-2",
+      "mt-2"
+    );
+
+    // Agregando el error al formulario
+    referencia.appendChild(error);
+  }
+
+  limpiarAlerta(referencia) {
+    // Comprueba si ya existe una alerta
+    const alerta = referencia.querySelector(".bg-danger");
+    if (alerta) {
+      alerta.remove();
     }
+  }
 
-    function limpiarAlerta (referencia){
-        // Comprueba si ya existe una alerta
-        const alerta = referencia.querySelector('.bg-danger');
-        if (alerta) {
-            alerta.remove();
-        }
+  comprobarEmail() {
+    const btnSubmit = document.querySelector(
+      '#formulario button[type="submit"]'
+    );
+    if (Object.values(email).includes("")) {
+      btnSubmit.classList.add("opacity-50");
+      btnSubmit.disabled = true;
+    } else {
+      btnSubmit.classList.remove("opacity-50");
+      btnSubmit.disabled = false;
     }
+  }
 
-    function validarEmail(email) {
-        const regex = /^\w+([.-_+]?\w+)*@\w+([.-]?\w+)*(\.\w{2,10})+$/;
-        const resultado = regex.test(email);
-        return resultado;
-    }
+  //   // Reiniciar el objeto
 
-    function comprobarEmail() {
+  //   function resetFormulario(){
 
-        if (Object.values(email).includes('')) {
-            btnSubmit.classList.add('opacity-50');
-            btnSubmit.disabled = true;
+  //       email.nombre = '';
+  //       email.numero = '';
+  //       email.email = '';
+  //       email.asunto = '';
+  //       email.mensaje = '';
 
-        } else {
-            btnSubmit.classList.remove('opacity-50');
-            btnSubmit.disabled = false;
-        }
-    }
+  //       formulario.reset();
+  //       comprobarEmail();
+  //   }
 
-    // Reiniciar el objeto
-
-    function resetFormulario(){
-
-        email.nombre = '';
-        email.numero = '';
-        email.email = '';
-        email.asunto = '';
-        email.mensaje = '';
-
-        formulario.reset();
-        comprobarEmail();
-    }
-
+  storeData(values) {
     // Agregando localstorge
     let counter = 0;
-    function storeData(){ 
-    
-    //stores items in the localStorage    
-    const nombre = document.querySelector('#nombre').value.toLowerCase();
-    const numero = document.querySelector('#numero').value;
-    const email = document.querySelector('#email').value.toLowerCase();
-    const asunto = document.querySelector('#asunto').value.toLowerCase();
-    const mensaje = document.querySelector('#mensaje').value.toLowerCase();
 
+    const nombre = document.querySelector("#nombre").value.toLowerCase();
+    const numero = document.querySelector("#numero").value;
+    const email = document.querySelector("#email").value.toLowerCase();
+    const asunto = document.querySelector("#asunto").value.toLowerCase();
+    const mensaje = document.querySelector("#mensaje").value.toLowerCase();
 
-    const data = {
-        nombre,
-        numero,
-        email,
-        asunto,
-        mensaje
-    } 
+    const result = Data.setDataContact(values);
+    //  const data = {
+    //       nombre,
+    //       numero,
+    //       email,
+    //       asunto,
+    //       mensaje
+    //   };
 
-    localStorage.setItem(`info_user${counter++}`,JSON.stringify(data))};       
-    
-});
+    //stores items in the localStorage
+    // localstorage.setItem(`info_user${counter++}`,JSON.stringify(data));
+  }
+}
 
+export default new App();
