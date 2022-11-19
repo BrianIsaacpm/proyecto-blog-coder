@@ -5,7 +5,7 @@
 }
 
 @mixin size-reset {
-    font-family: sans-serif;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     box-sizing: border-box;
     margin: $marginpadding-reset;
     padding: $marginpadding-reset;
@@ -13,9 +13,9 @@
 
 
 @mixin standard-h1{
-    font-size: 5vh;
+    font-size: 6vh;
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    text-shadow: 0 0 4px rgb(196, 157, 32), 0 0 5px rgb(255, 230, 0), 0 0 3px rgb(255, 217, 0), 0 0 7px rgb(255, 102, 0);
+    text-shadow: 0 0 2px rgb(196, 157, 32), 0 0 5px rgb(255, 230, 0), 0 0 2px rgb(255, 217, 0), 0 0 2px rgb(255, 102, 0);
   }
   
   @mixin flexbox-div{

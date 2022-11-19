@@ -1,29 +1,31 @@
 /* /////// Galeria Bootstrap ///////// */
-  
+
 main {
-
-
-.dropdown-item {
+  .dropdown-item {
     font-size: 1.6rem;
   }
-  
+
   #galeria .text-center {
     font-size: 1.6rem;
   }
-  
+
   #galeria .col-lg-4 {
-    padding: 2.5rem;
+    padding: 0.5rem;
   }
-  
+
   #galeria img {
-    width: 100%;
-    height: 55rem;
+    object-fit: cover;
     border-radius: 4%;
-  
+    overflow: hidden;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    min-height: 100%;
+    margin: auto;
+    display: block;
   }
-  
+
   #galeria img:hover {
-   border: 5px solid #f7f7f7;
+    border: 5px solid #f7f7f7;
   }
 }
-
