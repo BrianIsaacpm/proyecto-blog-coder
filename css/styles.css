@@ -504,7 +504,15 @@ main {
     @media screen and (max-width: 768px) {
       main .container__card {
         position: relative;
-        top: -150px;
+        top: -120px;
+        flex-direction: column;
+        align-content: center;
+        justify-content: center;
+        align-items: center; } }
+    @media screen and (max-width: 474px) {
+      main .container__card {
+        position: relative;
+        top: -30px;
         flex-direction: column;
         align-content: center;
         justify-content: center;
